@@ -1,6 +1,7 @@
 # docs: https://docs.gitlab.com/ce/ci/yaml/README.html
 stages:
   - test
+  - code_coverage
 
 test_project:
   stage: test
@@ -11,6 +12,22 @@ test_project:
     - macos
     - xcode
     - ios10.0
+
+code_coverage:
+  stage: code_coverage
+  script:
+    - xcodebuild test -project bytes.xcodeproj -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' -enableCodeCoverage YES | xcpretty -s
+    - slather coverage --scheme bytes bytes.xcodeproj
+#    - slather coverage -x --output-directory slather-report --scheme bytes bytes.xcodeproj # this saves a cobertura file; maybe we can use it somewhen
+  tags:
+    - macos
+    - xcode
+    - ios10.0
+    - slather
+  artifacts:
+    expire_in: 1 week
+    name: "%CI_BUILD_STAGE%_%CI_BUILD_REF_NAME%"
+    untracked: true
 
 .release_project:
   stage: release
