@@ -59,6 +59,13 @@ class ArrayTableViewDatasourceSpec: QuickSpec {
                 expect(calledIndexPath).to(equal(indexPath))
                 expect(calledString).to(equal(dataStub.data[indexPath.row]))
             }
+            // This test doesn't work. I thought is should, considering https://github.com/Quick/Nimble#swift-assertions
+//            it("should throw a fatal error if the indexPath is out of bounds") {
+//                let dataStub = ArrayTableViewDatasourceDataStub()
+//                let datasource = ArrayTableViewDatasource(data: dataStub.data, createCell: dataStub.createCell)
+//                let indexPath = IndexPath(row: 2, section: 0)
+//                expect { let _ = datasource.tableView(dataStub.tableView, cellForRowAt: indexPath); return nil}.to(throwAssertion())
+//            }
         }
         
         describe("didSelectRowAtIndexPath") {

@@ -60,7 +60,7 @@ public class ArrayTableViewDatasource<DataType>: NSObject, UITableViewDataSource
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard data.count > indexPath.row else { fatalError("error") }
+        guard data.count > indexPath.row else { fatalError("index out of bounds") }
         let dataObject = data[indexPath.row]
         return createCell(tableView, indexPath, dataObject)
     }
