@@ -17,13 +17,13 @@ import UIKit
 ///
 /// To use all features the tableView must be setup to use this as dataSource and delegate.
 /// The delegate is necessary for cell selection and custom header and footer views
-public class ArrayTableViewDatasource<ObjectType>: NSObject, UITableViewDataSource, UITableViewDelegate {
+public class ArrayTableViewDatasource<DataType>: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    public typealias CreateCell = (_ tableView: UITableView, _ indexPath: IndexPath) -> (UITableViewCell)
-    public typealias CreateHeaderView = (_ tableView: UITableView, _ section: Int) -> (UIView)
-    public typealias CreateFooterView = (_ tableView: UITableView, _ section: Int) -> (UIView)
+    public typealias CreateCell = (_ tableView: UITableView, _ indexPath: IndexPath, _ data: DataType) -> (UITableViewCell)
+    public typealias CreateHeaderView = (_ tableView: UITableView, _ section: Int) -> (UIView?)
+    public typealias CreateFooterView = (_ tableView: UITableView, _ section: Int) -> (UIView?)
 
-    private let data: [ObjectType]
+    private let data: [DataType]
     private let createCell: CreateCell
     
     /// This closure is invoked when the user selects the cell at an indexPath
@@ -43,7 +43,7 @@ public class ArrayTableViewDatasource<ObjectType>: NSObject, UITableViewDataSour
     /// - parameter createCell: a closure that must return the UITableViewCell for that indexPath
     ///
     /// - returns: a new datasource
-    init(data: [ObjectType], createCell: @escaping CreateCell) {
+    init(data: [DataType], createCell: @escaping CreateCell) {
         self.data = data
         self.createCell = createCell
     }
@@ -55,11 +55,14 @@ public class ArrayTableViewDatasource<ObjectType>: NSObject, UITableViewDataSour
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard section == 0 else { return 0 }
         return data.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return createCell(tableView, indexPath)
+        guard data.count > indexPath.row else { fatalError("error") }
+        let dataObject = data[indexPath.row]
+        return createCell(tableView, indexPath, dataObject)
     }
     
     // MARK: UITableViewDelegate
