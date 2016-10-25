@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build_project:
+  stage: build
+  script:
+    - xcodebuild clean -project bytes.xcodeproj -scheme bytes | xcpretty
+    - xcodebuild test -project bytes.xcodeproj -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios10.0
