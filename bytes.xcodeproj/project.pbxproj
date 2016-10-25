@@ -13,7 +13,6 @@
 		1FF0F0E51DBF4F61002BE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E31DBF4F61002BE0C9 /* Main.storyboard */; };
 		1FF0F0E71DBF4F61002BE0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E61DBF4F61002BE0C9 /* Assets.xcassets */; };
 		1FF0F0EA1DBF4F61002BE0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E81DBF4F61002BE0C9 /* LaunchScreen.storyboard */; };
-		1FF0F0F51DBF4F61002BE0C9 /* bytesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0F41DBF4F61002BE0C9 /* bytesTests.swift */; };
 		1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */; };
 		1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */; };
 		1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */; };
@@ -39,7 +38,6 @@
 		1FF0F0E91DBF4F61002BE0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FF0F0EB1DBF4F61002BE0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF0F0F01DBF4F61002BE0C9 /* bytesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bytesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FF0F0F41DBF4F61002BE0C9 /* bytesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bytesTests.swift; sourceTree = "<group>"; };
 		1FF0F0F61DBF4F61002BE0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayTableViewDatasource.swift; path = bytes/ArrayDatasource/ArrayTableViewDatasource.swift; sourceTree = "<group>"; };
 		1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDatasourceSpec.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		1FF0F0F31DBF4F61002BE0C9 /* bytesTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FF0F0F41DBF4F61002BE0C9 /* bytesTests.swift */,
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
 				1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */,
 				1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */,
@@ -366,7 +363,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
-				1FF0F0F51DBF4F61002BE0C9 /* bytesTests.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
