@@ -1,0 +1,22 @@
+# docs: https://docs.gitlab.com/ce/ci/yaml/README.html
+stages:
+  - test
+
+test_project:
+  stage: test
+  script:
+    - xcodebuild clean -project bytes.xcodeproj -scheme bytes | xcpretty
+    - xcodebuild test -project bytes.xcodeproj -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios10.0
+
+.release_project:
+  stage: release
+  script:
+    - ls -la
+  artifacts:
+    expire_in: 1 week
+    name: "%CI_BUILD_STAGE%_%CI_BUILD_REF_NAME%"
+    untracked: true
