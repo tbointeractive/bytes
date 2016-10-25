@@ -13,6 +13,7 @@
 		1FF0F0E71DBF4F61002BE0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E61DBF4F61002BE0C9 /* Assets.xcassets */; };
 		1FF0F0EA1DBF4F61002BE0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E81DBF4F61002BE0C9 /* LaunchScreen.storyboard */; };
 		1FF0F0F51DBF4F61002BE0C9 /* bytesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0F41DBF4F61002BE0C9 /* bytesTests.swift */; };
+		1FF0F1021DBF9A67002BE0C9 /* ArrayDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1FF0F0F01DBF4F61002BE0C9 /* bytesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bytesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF0F0F41DBF4F61002BE0C9 /* bytesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bytesTests.swift; sourceTree = "<group>"; };
 		1FF0F0F61DBF4F61002BE0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF0F1011DBF9A66002BE0C9 /* ArrayDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayDatasource.swift; path = bytes/ArrayDatasource/ArrayDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		1FF0F0DE1DBF4F61002BE0C9 /* bytes */ = {
 			isa = PBXGroup;
 			children = (
+				1FF0F0FF1DBF9A39002BE0C9 /* bytes */,
 				1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */,
 				1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */,
 				1FF0F0E31DBF4F61002BE0C9 /* Main.storyboard */,
@@ -94,6 +97,22 @@
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
 			);
 			path = bytesTests;
+			sourceTree = "<group>";
+		};
+		1FF0F0FF1DBF9A39002BE0C9 /* bytes */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */,
+			);
+			name = bytes;
+			sourceTree = "<group>";
+		};
+		1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				1FF0F1011DBF9A66002BE0C9 /* ArrayDatasource.swift */,
+			);
+			name = ArrayDatasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +220,7 @@
 			files = (
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
+				1FF0F1021DBF9A67002BE0C9 /* ArrayDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
