@@ -6,17 +6,25 @@ stages:
 test_project:
   stage: test
   script:
-    - xcodebuild clean -project bytes.xcodeproj -scheme bytes | xcpretty
-    - xcodebuild test -project bytes.xcodeproj -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' | xcpretty -s
+    - pod repo update
+    - pod install
+    - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' | xcpretty -s
   tags:
     - macos
     - xcode
     - ios10.0
+    - cocoapods
+  cache:
+    paths:
+      - Pods
 
 code_coverage:
   stage: code_coverage
   script:
-    - xcodebuild test -project bytes.xcodeproj -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' -enableCodeCoverage YES | xcpretty -s
+    - pod repo update
+    - pod install
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' -enableCodeCoverage YES | xcpretty -s
     - slather coverage --scheme bytes bytes.xcodeproj
 #    - slather coverage -x --output-directory slather-report --scheme bytes bytes.xcodeproj # this saves a cobertura file; maybe we can use it somewhen
   tags:
@@ -24,10 +32,10 @@ code_coverage:
     - xcode
     - ios10.0
     - slather
-  artifacts:
-    expire_in: 1 week
-    name: "%CI_BUILD_STAGE%_%CI_BUILD_REF_NAME%"
-    untracked: true
+    - cocoapods
+  cache:
+    paths:
+      - Pods
 
 .release_project:
   stage: release
