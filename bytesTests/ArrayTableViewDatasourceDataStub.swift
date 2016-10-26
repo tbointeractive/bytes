@@ -12,7 +12,7 @@ import UIKit
 class ArrayTableViewDatasourceDataStub {
     
     var tableView = UITableView()
-    var data = ["_specStringA","_specStringB"]
+    var data = [["_specString1A","_specString1B"],["_specString2A","_specString2B"],["_specString3A","_specString3B"]]
     var createCell: ArrayTableViewDatasource<String>.CreateCell!
     var lastCreateCellCall: (UITableView, IndexPath, String)?
     

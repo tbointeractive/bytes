@@ -11,7 +11,8 @@ import UIKit
 
 /// A UITableViewDatasource that displays data from an Array
 /// Features:
-/// - it only displays one section
+/// - every array in the data array represents one section
+/// - every item in every array in the data array represents one row
 /// - it has optional section header and footer
 /// - it has a closure that is invoked if the user tapps a cell
 ///
@@ -23,7 +24,7 @@ public class ArrayTableViewDatasource<DataType>: NSObject, UITableViewDataSource
     public typealias CreateHeaderView = (_ tableView: UITableView, _ section: Int) -> (UIView?)
     public typealias CreateFooterView = (_ tableView: UITableView, _ section: Int) -> (UIView?)
 
-    private let data: [DataType]
+    private let data: [[DataType]]
     private let createCell: CreateCell
     
     /// This closure is invoked when the user selects the cell at an indexPath
@@ -43,7 +44,7 @@ public class ArrayTableViewDatasource<DataType>: NSObject, UITableViewDataSource
     /// - parameter createCell: a closure that must return the UITableViewCell for that indexPath
     ///
     /// - returns: a new datasource
-    init(data: [DataType], createCell: @escaping CreateCell) {
+    init(data: [[DataType]], createCell: @escaping CreateCell) {
         self.data = data
         self.createCell = createCell
     }
@@ -51,17 +52,18 @@ public class ArrayTableViewDatasource<DataType>: NSObject, UITableViewDataSource
     // MARK: UITableViewDataSource
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard section == 0 else { return 0 }
         return data.count
     }
     
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard data.count > section else { return 0 }
+        return data[section].count
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard data.count > indexPath.row else { fatalError("index out of bounds") }
-        let dataObject = data[indexPath.row]
+        guard data.count > indexPath.section &&
+            data[indexPath.section].count > indexPath.row else { fatalError("index out of bounds") }
+        let dataObject = data[indexPath.section][indexPath.row]
         return createCell(tableView, indexPath, dataObject)
     }
     
