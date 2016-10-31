@@ -1,4 +1,4 @@
-# Bytes
+# bytes
 
 ## develop
 [![build status](http://git.tbointeractive.com/chorstmann/bytes/badges/develop/build.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/develop) 
@@ -8,7 +8,7 @@
 [![build status](http://git.tbointeractive.com/chorstmann/bytes/badges/master/build.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/master)
 [![coverage report](http://git.tbointeractive.com/chorstmann/bytes/badges/master/coverage.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/master)
 
-Bytes is a set of tools to cover many all-day tasks in Swift development for iOS.
+*bytes* is a set of tools to cover many all-day tasks in Swift development for iOS.
 
 ## Installation
 The installation via CocoaPods is recommended.
@@ -18,10 +18,10 @@ Add `git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git` as additional sourc
 source 'git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git'
 ```
 
-Install Bytes:
+Install *bytes*:
 
 ```
-pod 'TBOBytes'
+pod 'bytes'
 ```
 
 ## Usage
