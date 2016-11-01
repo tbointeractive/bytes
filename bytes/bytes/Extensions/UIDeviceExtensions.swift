@@ -8,20 +8,20 @@
 
 import UIKit
 
-class Device {
+extension UIDevice {
     
-    /// Returns the platform name of the device i.e. "iPhone1,1" or "iPad3,6"
-    static var platform: String { get {
+    /// The platform name of the device i.e. "iPhone1,1" or "iPad3,6"
+    static let platform: String = {
         var size = 0
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         var machine = [CChar](repeating: 0,  count: Int(size))
         sysctlbyname("hw.machine", &machine, &size, nil, 0)
         return String(cString: machine)
-        }}
+    }()
     
-    /// Returns a human readable version of the platform name i.e. "iPhone 6 Plus" or "iPad Air 2 (WiFi)"
-    /// In case it couldn't find a humaen readable representation it returns the platform name as is.
-    static var humanReadablePlatformName: String { get {
+    /// A human readable version of the platform name i.e. "iPhone 6 Plus" or "iPad Air 2 (WiFi)"
+    /// Or the platform name in case no human readable name was found.
+    static let humanReadablePlatformName: String = {
         switch platform {
             
         // iPhone
@@ -94,11 +94,11 @@ class Device {
             
         default: return platform
         }
-        }}
+    }()
     
-    /// Returns the version number of the OS as String i.e. "1.2" or "9.4"
-    static var osVersion: String { get {
+    /// The version number of the OS as String i.e. "1.2" or "9.4"
+    static let osVersion: String = {
         return UIDevice.current.systemVersion
-        }}
+    }()
     
 }

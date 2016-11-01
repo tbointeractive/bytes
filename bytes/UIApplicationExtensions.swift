@@ -10,32 +10,23 @@ import UIKit
 
 extension UIApplication {
     
-    /// Returns name of your app as displayd on the homescreen i.e. "My App"
-    static var bundleDisplayName: String? {
-        get {
+    /// The name of your app as displayed on the homescreen i.e. "My App"
+    static let bundleDisplayName: String? = {
             return Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String
-        }
-    }
+    }()
     
-    /// Returns the bundle name of your app i.e. "com.my-company.my-app"
-    static var bundleName: String? {
-        get {
+    /// The bundle name of your app i.e. "com.my-company.my-app"
+    static let bundleName: String? = {
             return Bundle.main.infoDictionary?["CFBundleName"] as? String
-        }
-    }
+    }()
     
-    /// Returns the bundle version aka build number as String i.e. "149"
-    static var bundleVersion: String? {
-        get {
-            return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
-        }
-    }
+    /// The bundle version aka build number as String i.e. "149"
+    static let bundleVersion: String? = {
+        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+    }()
     
-    /// Returns the app version as String i.e. "1.0.1"
-    static var bundleShortVersion: String? {
-        get {
+    /// The app version as String i.e. "1.0.1"
+    static let bundleShortVersion: String? = {
             return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        }
-    }
-    
+    }()
 }
