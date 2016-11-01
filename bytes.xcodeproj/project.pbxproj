@@ -10,6 +10,8 @@
 		0623B578E7092AA8901A81F8 /* Pods_bytesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */; };
 		1F27173B1DC8A9C700DD4318 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173A1DC8A9C700DD4318 /* UIColorExtensions.swift */; };
 		1F27173D1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173C1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift */; };
+		1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */; };
+		1F2717411DC8CC6600DD4318 /* DiscardTouchViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */; };
 		1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */; };
 		1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */; };
 		1FF0F0E51DBF4F61002BE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E31DBF4F61002BE0C9 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		1F27173A1DC8A9C700DD4318 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1F27173C1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorSettingValuesExtensionSpec.swift; sourceTree = "<group>"; };
+		1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchView.swift; sourceTree = "<group>"; };
+		1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchViewSpec.swift; sourceTree = "<group>"; };
 		1FF0F0DC1DBF4F61002BE0C9 /* bytes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */,
 				75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */,
 				1F27173C1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift */,
+				1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */,
 			);
 			path = bytesTests;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			children = (
 				75033E3B1DC1F3B9003BDAB2 /* Extensions */,
 				1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */,
+				1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */,
 			);
 			name = bytes;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
+				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
 				75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */,
 				1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */,
@@ -384,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2717411DC8CC6600DD4318 /* DiscardTouchViewSpec.swift in Sources */,
 				1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
 				1F27173D1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
