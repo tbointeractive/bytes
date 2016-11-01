@@ -16,6 +16,8 @@
 		1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */; };
 		1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */; };
 		1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */; };
+		75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75033E3C1DC1F3D1003BDAB2 /* UIViewExtensions.swift */; };
+		75BB7BEE1DC240E70078A853 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */; };
 		BC2A29C285BD969EF2DE3FF9 /* Pods_bytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE915E8665E4B0FA96257175 /* Pods_bytes.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bytesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FABA55EBADF56EF8C67F6B /* Pods-bytes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bytes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bytes/Pods-bytes.debug.xcconfig"; sourceTree = "<group>"; };
 		5EE23041ABFC9059661D8E2F /* Pods-bytesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bytesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bytesTests/Pods-bytesTests.release.xcconfig"; sourceTree = "<group>"; };
+		75033E3C1DC1F3D1003BDAB2 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = bytes/Extensions/UIViewExtensions.swift; sourceTree = "<group>"; };
+		75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsSpec.swift; sourceTree = "<group>"; };
 		AE915E8665E4B0FA96257175 /* Pods_bytes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bytes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20C79CAD39B8DA3FB1F0A9D /* Pods-bytes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bytes.release.xcconfig"; path = "Pods/Target Support Files/Pods-bytes/Pods-bytes.release.xcconfig"; sourceTree = "<group>"; };
 		F3DBA816DB155E058E3C1D94 /* Pods-bytesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bytesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bytesTests/Pods-bytesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
 				1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */,
 				1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */,
+				75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */,
 			);
 			path = bytesTests;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 		1FF0F0FF1DBF9A39002BE0C9 /* bytes */ = {
 			isa = PBXGroup;
 			children = (
+				75033E3B1DC1F3B9003BDAB2 /* Extensions */,
 				1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */,
 			);
 			name = bytes;
@@ -148,6 +154,14 @@
 				3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75033E3B1DC1F3B9003BDAB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75033E3C1DC1F3D1003BDAB2 /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +368,7 @@
 			files = (
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
+				75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */,
 				1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +379,7 @@
 			files = (
 				1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
+				75BB7BEE1DC240E70078A853 /* UIViewExtensionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
