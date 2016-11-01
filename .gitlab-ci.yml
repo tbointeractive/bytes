@@ -4,8 +4,7 @@ stages:
   - release
 
 before_script:
-  - pod repo update
-  - pod install
+  - pod install || pod install --repo-update
 
 test_project:
   stage: test
