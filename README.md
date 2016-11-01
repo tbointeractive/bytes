@@ -27,6 +27,12 @@ pod 'bytes'
 ## Usage
 TODO…
 
+## Documentation
+Documentation is created with [jazzy](https://github.com/realm/jazzy).
+To add documentation to classes and methods use Xcode to generate a template (```Editor -> Structure -> Add Documentation``` ) and fill in the appropriate text.
+
+About how to install and use jazzy see it’s [github page](https://github.com/realm/jazzy)
+
 ## Credits
 [TBO Interactive GmbH & Co. KG](http://www.tbointeractive.com)
 
