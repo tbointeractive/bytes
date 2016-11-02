@@ -42,6 +42,10 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+    </array>
+    <key>UIAppFonts</key>
+    <array>
+        <string>iconfont.ttf</string>
+    </array>
 </dict>
 </plist>

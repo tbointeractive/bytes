@@ -10,6 +10,10 @@
 		0623B578E7092AA8901A81F8 /* Pods_bytesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */; };
 		1F27173B1DC8A9C700DD4318 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173A1DC8A9C700DD4318 /* UIColorExtensions.swift */; };
 		1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */; };
+		1F2717411DC8CC6600DD4318 /* DiscardTouchViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */; };
+		1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC191DC9EEEE004F3433 /* IconFont.swift */; };
+		1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */; };
+		1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */; };
 		1F3B9E9B1DCB817500727379 /* ArrayTableViewDatasourceDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */; };
 		1F3B9E9C1DCB818700727379 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */; };
 		1F3B9E9D1DCB818700727379 /* UIApplicationExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF6F1DC8D1AF000E3314 /* UIApplicationExtensionsSpec.swift */; };
@@ -49,6 +53,9 @@
 		1F27173C1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorSettingValuesExtensionSpec.swift; sourceTree = "<group>"; };
 		1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchView.swift; sourceTree = "<group>"; };
 		1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchViewSpec.swift; sourceTree = "<group>"; };
+		1F81BC191DC9EEEE004F3433 /* IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
+		1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSpec.swift; sourceTree = "<group>"; };
+		1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		1FF0F0DC1DBF4F61002BE0C9 /* bytes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +148,7 @@
 				1FF0F0E61DBF4F61002BE0C9 /* Assets.xcassets */,
 				1FF0F0E81DBF4F61002BE0C9 /* LaunchScreen.storyboard */,
 				1FF0F0EB1DBF4F61002BE0C9 /* Info.plist */,
+				1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */,
 			);
 			path = bytes;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
+				9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */,
 				1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */,
 				1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */,
 				75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */,
@@ -158,7 +167,7 @@
 				1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */,
 				9EA85DBF1DC38700001EA93D /* UIImageExtensionSpec.swift */,
 				7510AF751DC90145000E3314 /* DateFormatterExtensionsSpec.swift */,
-				9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */,
+				1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */,
 			);
 			path = bytesTests;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 				1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */,
 				1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */,
 				9EA85DBD1DC37E18001EA93D /* UIImageExtension.swift */,
+				1F81BC191DC9EEEE004F3433 /* IconFont.swift */,
 			);
 			name = bytes;
 			sourceTree = "<group>";
@@ -292,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */,
 				1FF0F0EA1DBF4F61002BE0C9 /* LaunchScreen.storyboard in Resources */,
 				1FF0F0E71DBF4F61002BE0C9 /* Assets.xcassets in Resources */,
 				1FF0F0E51DBF4F61002BE0C9 /* Main.storyboard in Resources */,
@@ -408,6 +419,7 @@
 			files = (
 				7510AF6E1DC8C89A000E3314 /* UIApplicationExtensions.swift in Sources */,
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
+				1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */,
 				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
 				75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */,
@@ -430,6 +442,7 @@
 				1F3B9EA31DCB81F100727379 /* DateFormatterExtensionsSpec.swift in Sources */,
 				1F3B9E9B1DCB817500727379 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
+				1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* UIApplicationExtensionsSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColorSettingValuesExtensionSpec.swift in Sources */,
 			);
