@@ -21,18 +21,13 @@ extension DateFormatter {
     }()
     
     /// A date formatter conforming to the ISO 8601 standard using this format: yyyy-MM-dd'T'HH:mm:ssZZZZZ
-    /// On iOS 10+ it is a ISO8601DateFormatter; on earlier versions it's a DateFormatter
     /// The default time zone is GMT
-    static public let iso8601Formatter: Formatter = {
-        if #available(iOS 10.0, *) {
-            return ISO8601DateFormatter()
-        } else {
-            let dateFormatter = DateFormatter()
-            // This is to macht the ISO8601DateFormatter default format and timeZone
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-            return dateFormatter
-        }
+    static public let iso8601Formatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        // This is to macht the ISO8601DateFormatter default format and timeZone
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        return dateFormatter
     }()
     
     /// A date formatter for localized month and day representation i.e. "23.06." or "06/23"
@@ -49,6 +44,7 @@ extension DateFormatter {
     
     /// A date formatter for localized abbreviated weekday representation i.e. "Mo" or "Tue"
     /// with current locale
+    /// - note: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
     static public let weekdayShort: DateFormatter = {
         return DateFormatter.weekdayShort(forLocale: Locale.current)
     }()
@@ -82,6 +78,7 @@ extension DateFormatter {
     }
     
     /// A date formatter for localized abbreviated weekday representation i.e. "Mo" or "Tue"
+    /// - note: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter

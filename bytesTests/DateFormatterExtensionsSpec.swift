@@ -30,17 +30,10 @@ class DateFormatterExtensionsSpec: QuickSpec {
                 expect(dateString) == "2016-11-01T17:01:04Z"
             }
             it("should be correct date string for reference date with CET timeZone") {
-                if #available(iOS 10.0, *) {
-                    let dateFormatter = DateFormatter.iso8601Formatter as! ISO8601DateFormatter
-                    dateFormatter.timeZone = TimeZone(abbreviation:"CET")
-                    let dateString = dateFormatter.string(for:self.referenceDate)
-                    expect(dateString) == "2016-11-01T18:01:04+01:00"
-                } else {
-                    let dateFormatter = DateFormatter.iso8601Formatter as! DateFormatter
-                    dateFormatter.timeZone = TimeZone(abbreviation:"CET")
-                    let dateString = dateFormatter.string(for:self.referenceDate)
-                    expect(dateString) == "2016-11-01T18:01:04Z+01:00"
-                }
+                let dateFormatter = DateFormatter.iso8601Formatter
+                dateFormatter.timeZone = TimeZone(abbreviation:"CET")
+                let dateString = dateFormatter.string(for:self.referenceDate)
+                expect(dateString) == "2016-11-01T18:01:04+01:00"
             }
         }
         
@@ -104,7 +97,11 @@ class DateFormatterExtensionsSpec: QuickSpec {
             it("should be correct for german locale") {
                 let dateFormatter = DateFormatter.weekdayShort(forLocale: Locale(identifier: "de_DE"))
                 let dateString = dateFormatter.string(for:self.referenceDate)
-                expect(dateString) == "Di"
+                if #available(iOS 9, *) {
+                    expect(dateString) == "Di"
+                } else {
+                    expect(dateString) == "Di."
+                }
             }
             it("should be correct for englisch locale") {
                 let dateFormatter = DateFormatter.weekdayShort(forLocale: Locale(identifier: "en_US"))
