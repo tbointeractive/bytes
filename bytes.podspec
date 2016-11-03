@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Thorsten Stark" => "stark@tbointeractive.com", "Bernhard Eiling" => "eiling@tbointeractive.com"  }
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.4"
 
   s.source       = { :git => "git@git.tbointeractive.com:chorstmann/bytes.git", :tag => '0.1'}
 

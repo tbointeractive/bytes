@@ -21,7 +21,9 @@ class UIImageExtensionSpec: QuickSpec {
         describe("flippedVertically") {
             context("with a CIImage") {
                 it ("should return a flipped image") {
-                    let originalImage = UIImage(ciImage: CIImage(cgImage: UIImage(named: "original", in: Bundle(identifier: "com.tbointeractive.bytesTests"), compatibleWith: nil)!.cgImage!), scale: 2, orientation: .up)
+                    let imageFromBundle = UIImage(named: "original", in: Bundle(identifier: "com.tbointeractive.bytesTests"), compatibleWith: nil)!
+                    let ciimage = CIImage(cgImage: imageFromBundle.cgImage!)
+                    let originalImage = UIImage(ciImage: ciimage, scale: 2, orientation: .up)
                     let mutatedImage = originalImage.flippedVertically()
                     expect(UIImageView(image: mutatedImage)).to(haveValidSnapshot())
                 }
