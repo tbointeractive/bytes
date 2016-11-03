@@ -9,7 +9,8 @@
 import UIKit
 
 /// An IconFont is a class that helps handling icon fonts. 
-/// You can generate your own icon font on different sites, such as: http://fontello.com
+/// You can generate your own icon font on different sites, such as: http://fontello.com or https://icomoon.io
+/// - note: http://fontello.com generated fonts tend to be incompatible with iOS < 9
 ///
 /// We recommend to subclass IconFont and have a `static let defaultFont = IconFont(font: UIFont(name: "your-font-name", size: 1.0))`.
 /// Also consider to add a custom enum to map all your icon identifiers.

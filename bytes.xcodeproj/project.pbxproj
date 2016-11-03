@@ -10,10 +10,6 @@
 		0623B578E7092AA8901A81F8 /* Pods_bytesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */; };
 		1F27173B1DC8A9C700DD4318 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173A1DC8A9C700DD4318 /* UIColorExtensions.swift */; };
 		1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */; };
-		1F2717411DC8CC6600DD4318 /* DiscardTouchViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */; };
-		1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC191DC9EEEE004F3433 /* IconFont.swift */; };
-		1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */; };
-		1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */; };
 		1F3B9E9B1DCB817500727379 /* ArrayTableViewDatasourceDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */; };
 		1F3B9E9C1DCB818700727379 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */; };
 		1F3B9E9D1DCB818700727379 /* UIApplicationExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF6F1DC8D1AF000E3314 /* UIApplicationExtensionsSpec.swift */; };
@@ -22,6 +18,9 @@
 		1F3B9EA01DCB81A400727379 /* DiscardTouchViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */; };
 		1F3B9EA31DCB81F100727379 /* DateFormatterExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF751DC90145000E3314 /* DateFormatterExtensionsSpec.swift */; };
 		1F3B9EA41DCB85ED00727379 /* UIImageExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA85DBF1DC38700001EA93D /* UIImageExtensionSpec.swift */; };
+		1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC191DC9EEEE004F3433 /* IconFont.swift */; };
+		1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */; };
+		1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */; };
 		1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */; };
 		1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */; };
 		1FF0F0E51DBF4F61002BE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E31DBF4F61002BE0C9 /* Main.storyboard */; };

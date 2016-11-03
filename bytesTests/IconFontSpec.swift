@@ -26,13 +26,13 @@ class IconFontSpec: QuickSpec {
             it("should return a string when used with a valid identifier") {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
-                let string = iconFont.iconString(identifier: "\u{E800}", size: 20.0)
+                let string = iconFont.iconString(identifier: "\u{Eabe}", size: 20.0)
                 expect(string).toNot(beNil())
             }
             it("should return a string whith the correct size") {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
-                let string = iconFont.iconString(identifier: "\u{E800}", size: 20.0)
+                let string = iconFont.iconString(identifier: "\u{Eabe}", size: 20.0)
                 let usedFont = string?.attributes(at: 0, effectiveRange: nil)[NSFontAttributeName] as! UIFont
                 expect(usedFont.pointSize) == 20.0
             }
@@ -41,7 +41,7 @@ class IconFontSpec: QuickSpec {
             it("should return the correct image") {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
-                let image = iconFont.iconImage(identifier: "\u{E800}", size: CGSize(width: 20.0, height: 20.0))
+                let image = iconFont.iconImage(identifier: "\u{Eabe}", size: CGSize(width: 20.0, height: 20.0))
                 expect(image).toNot(beNil())
                 let imageView = UIImageView(image: image)
                 imageView.tintColor = UIColor.black
@@ -50,7 +50,7 @@ class IconFontSpec: QuickSpec {
             it("should use the height as the fontSize") {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
-                let image = iconFont.iconImage(identifier: "\u{E800}", size: CGSize(width: 50.0, height: 20.0))
+                let image = iconFont.iconImage(identifier: "\u{Eabe}", size: CGSize(width: 50.0, height: 20.0))
                 let imageView = UIImageView(image: image)
                 imageView.tintColor = UIColor.black
                 expect(image).toNot(beNil())
@@ -59,7 +59,7 @@ class IconFontSpec: QuickSpec {
             it("should return a template image") {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
-                let image = iconFont.iconImage(identifier: "\u{E800}", size: CGSize(width: 20.0, height: 20.0))
+                let image = iconFont.iconImage(identifier: "\u{Eabe}", size: CGSize(width: 20.0, height: 20.0))
                 let imageView = UIImageView(image: image)
                 imageView.tintColor = UIColor.blue
                 expect(image).toNot(beNil())
