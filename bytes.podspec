@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
 
   s.name         = "bytes"
   s.version      = "0.1"
-  s.summary      = "Some tools for common swift tasks."
+  s.summary      = "Have some bytes"
 
   s.description  = <<-DESC
-                    bytes - Some tools for common swift tasks
+                    bytes is a set of tools to cover many all-day tasks in iOS development.
                    DESC
 
   s.homepage     = "http://git.tbointeractive.com/chorstmann/bytes"
