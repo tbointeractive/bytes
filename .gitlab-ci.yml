@@ -1,0 +1,83 @@
+# docs: https://docs.gitlab.com/ce/ci/yaml/README.html
+stages:
+  - test
+  - release
+
+before_script:
+  - pod install || pod install --repo-update
+
+test_ios10.1:
+  stage: test
+  script:
+    - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.1' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios10.1
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+test_ios9.3:
+  stage: test
+  script:
+    - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios9.3
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+test_ios8.4:
+  stage: test
+  script:
+    - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.4' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios8.4
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+code_coverage:
+  stage: test
+  script:
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' -enableCodeCoverage YES | xcpretty -s
+    - slather coverage --scheme bytes bytes.xcodeproj
+  tags:
+    - macos
+    - xcode
+    - ios10.0
+    - slather
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+generate_documentation:
+  stage: release
+  only:
+    - master
+    - develop
+  script:
+    - jazzy
+  artifacts:
+    paths:
+      - docs
+    expire_in: 1 mos
+    when: always
+    name: "jazzy doc"
+  tags:
+    - macos
+    - xcode
+    - jazzy
+    - cocoapods
