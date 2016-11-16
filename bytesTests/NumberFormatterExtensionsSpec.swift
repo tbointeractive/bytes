@@ -6,7 +6,6 @@
 //  Copyright © 2016 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
-
 @testable import bytes
 
 import Quick
