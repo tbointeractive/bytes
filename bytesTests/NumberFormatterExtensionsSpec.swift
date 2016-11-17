@@ -25,6 +25,10 @@ class NumberFormatterExtensionsSpec: QuickSpec {
                 let formatter = NumberFormatter.decimalSingleDigit
                 expect(formatter.string(from: NSNumber(floatLiteral: 12.1234))).to(equal("12.1"))
             }
+            it("should format a number with always a leading digit") {
+                let formatter = NumberFormatter.decimalSingleDigit
+                expect(formatter.string(from: NSNumber(floatLiteral: 0.1234))).to(equal("0.1"))
+            }
         }
         describe("decimalDoubleDigit") {
             it("should return a Numberformatter with maximumFractionDigits 2") {
@@ -37,6 +41,10 @@ class NumberFormatterExtensionsSpec: QuickSpec {
             it("should format a number with two fraction digits") {
                 let formatter = NumberFormatter.decimalDoubleDigit
                 expect(formatter.string(from: NSNumber(floatLiteral: 12.1234))).to(equal("12.12"))
+            }
+            it("should format a number with always a leading digit") {
+                let formatter = NumberFormatter.decimalDoubleDigit
+                expect(formatter.string(from: NSNumber(floatLiteral: 0.1234))).to(equal("0.12"))
             }
         }
     }
