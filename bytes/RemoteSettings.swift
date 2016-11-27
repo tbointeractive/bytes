@@ -1,0 +1,104 @@
+//
+//  RemoteSettings.swift
+//  bytes
+//
+//  Created by Cornelius Horstmann on 27.11.16.
+//  Copyright © 2016 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
+//
+
+import Foundation
+
+/// Settings that are possibly updated from a remote source.
+/// This class is designed to be overridden, especially the `update(_ data: Data) throws` method.
+/// There are specialized implementations such as `JSONRemoteSettings` which already parses the JSON data.
+public class RemoteSettings {
+    
+    /// The Completionblock for the update process.
+    /// If the error is set no changes have been made.
+    /// If the error is nil, the update was performed successful.
+    public typealias Completion = ((_ error: Error?)->())
+    
+    /// The local file URL of the settings.
+    public let local: URL?
+    
+    /// The remote URL of the settings.
+    public let remote: URL
+    
+    /// If set to true, the result of the last remote update is used to
+    /// initialize the settings instead of the local file.
+    public let shouldCache: Bool
+    
+    /// The DataFetcher to use for remote updates.
+    public let fetcher: DataFetcher
+    
+    /// Initializes a new RemoteSettings Object.
+    ///
+    /// - Parameters:
+    ///   - remote: The remote URL of the Settings.
+    ///   - local: The local URL of the Settings. If set, the settings are initialized with the contents from this file.
+    ///   - fetcher: The DataFetcher to use to fetch the data from the remote. If not set, a new NSURLSessionDataFetcher will be used.
+    ///   - shouldCache: If set to true, the result of the last remote update is used to initialize the settings instead of the local file. Default true.
+    required public init(remote: URL, local: URL? = nil, fetcher: DataFetcher = URLSessionDataFetcher(), shouldCache: Bool = true) {
+        self.remote = remote
+        self.local = local
+        self.fetcher = fetcher
+        self.shouldCache = shouldCache // TODO: implement the cache
+        do {
+            guard let local = local else { return }
+            let data = try Data(contentsOf: local)
+            try update(data)
+        } catch {
+            print("Unable to initialize the settings from \(local) with error \(error)")
+        }
+    }
+    
+    /// Updates the Settings from the remote URL.
+    /// First it uses the `fetcher` to download the data. This data is then used 
+    /// with the `update(_ data:) throws` method.
+    ///
+    /// - Parameter finished: The `Complection` block called if update succeeds or finishes.
+    public func update(finished: Completion?) {
+        update(remote, finished: finished)
+    }
+    
+    /// Updates itself from a Data object.
+    /// This method is called when updating (or initializing) from a local source
+    /// or from a remote source.
+    /// 
+    /// When overriding this method do not call `super.update(data)` scince it throws a
+    /// `RemoteSettings.UpdateError.UnableToParseData` error.
+    ///
+    /// - Parameter data: The Data object to update from.
+    /// - Throws: Throws errors that can happen while updating, such as parsing errors.
+    /// 
+    /// - Warning: This method should be overridden by subclasses to parse the data, and provide it to the application.
+    open func update(_ data: Data) throws {
+        throw RemoteSettings.UpdateError.UnableToParseData
+    }
+    
+    private func update(_ url: URL, finished: Completion?) {
+        fetcher.fetch(url) { data, fetchingError in
+            if let data = data {
+                do {
+                    try self.update(data)
+                    finished?(nil)
+                } catch {
+                    finished?(error)
+                }
+            } else {
+                finished?(fetchingError)
+            }
+        }
+    }
+}
+
+
+extension RemoteSettings {
+    /// Errors that can happen during the update process.
+    enum UpdateError: Error {
+        /// It was impossible to fetch the data from the remote source.
+        case UnableToFetchData
+        /// It was impossible to parse the data.
+        case UnableToParseData
+    }
+}
