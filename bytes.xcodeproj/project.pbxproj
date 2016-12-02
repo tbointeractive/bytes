@@ -18,6 +18,12 @@
 		1F3B9EA01DCB81A400727379 /* DiscardTouchViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */; };
 		1F3B9EA31DCB81F100727379 /* DateFormatterExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF751DC90145000E3314 /* DateFormatterExtensionsSpec.swift */; };
 		1F3B9EA41DCB85ED00727379 /* UIImageExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA85DBF1DC38700001EA93D /* UIImageExtensionSpec.swift */; };
+		1F5DDCD71DDC66B7002412EA /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCD61DDC66B7002412EA /* NumberFormatterExtension.swift */; };
+		1F5DDCDD1DDC6BE0002412EA /* NumberFormatterExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCDC1DDC6BE0002412EA /* NumberFormatterExtensionsSpec.swift */; };
+		1F5DDCDF1DDC9477002412EA /* DateComponentsFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCDE1DDC9477002412EA /* DateComponentsFormatterExtensions.swift */; };
+		1F5DDCE11DDC948F002412EA /* DateComponentsFormatterExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCE01DDC948F002412EA /* DateComponentsFormatterExtensionSpec.swift */; };
+		1F5DDCE31DDC9B5F002412EA /* ByteCountFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCE21DDC9B5F002412EA /* ByteCountFormatterExtensions.swift */; };
+		1F5DDCE51DDC9B7E002412EA /* ByteCountFormatterExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DDCE41DDC9B7E002412EA /* ByteCountFormatterExtensionSpec.swift */; };
 		1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC191DC9EEEE004F3433 /* IconFont.swift */; };
 		1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */; };
 		1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */; };
@@ -29,11 +35,10 @@
 		1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */; };
 		1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */; };
 		75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75033E3C1DC1F3D1003BDAB2 /* UIViewExtensions.swift */; };
-		75BB7BEE1DC240E70078A853 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB7BED1DC240E70078A853 /* UIViewExtensionsSpec.swift */; };
-		9E858CE81DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E858CE71DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift */; };
 		7510AF6C1DC8ACBA000E3314 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF6B1DC8ACBA000E3314 /* UIDeviceExtensions.swift */; };
 		7510AF6E1DC8C89A000E3314 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF6D1DC8C89A000E3314 /* UIApplicationExtensions.swift */; };
 		7510AF741DC8E5F5000E3314 /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF731DC8E5F5000E3314 /* DateFormatterExtensions.swift */; };
+		9E858CE81DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E858CE71DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift */; };
 		9EA85DBE1DC37E18001EA93D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA85DBD1DC37E18001EA93D /* UIImageExtension.swift */; };
 		9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */; };
 		BC2A29C285BD969EF2DE3FF9 /* Pods_bytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE915E8665E4B0FA96257175 /* Pods_bytes.framework */; };
@@ -54,6 +59,12 @@
 		1F27173C1DC8AC2B00DD4318 /* UIColorSettingValuesExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorSettingValuesExtensionSpec.swift; sourceTree = "<group>"; };
 		1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchView.swift; sourceTree = "<group>"; };
 		1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchViewSpec.swift; sourceTree = "<group>"; };
+		1F5DDCD61DDC66B7002412EA /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
+		1F5DDCDC1DDC6BE0002412EA /* NumberFormatterExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtensionsSpec.swift; sourceTree = "<group>"; };
+		1F5DDCDE1DDC9477002412EA /* DateComponentsFormatterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponentsFormatterExtensions.swift; sourceTree = "<group>"; };
+		1F5DDCE01DDC948F002412EA /* DateComponentsFormatterExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponentsFormatterExtensionSpec.swift; sourceTree = "<group>"; };
+		1F5DDCE21DDC9B5F002412EA /* ByteCountFormatterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteCountFormatterExtensions.swift; sourceTree = "<group>"; };
+		1F5DDCE41DDC9B7E002412EA /* ByteCountFormatterExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteCountFormatterExtensionSpec.swift; sourceTree = "<group>"; };
 		1F81BC191DC9EEEE004F3433 /* IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFont.swift; sourceTree = "<group>"; };
 		1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconFontSpec.swift; sourceTree = "<group>"; };
 		1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
@@ -171,6 +182,9 @@
 				7510AF751DC90145000E3314 /* DateFormatterExtensionsSpec.swift */,
 				9E858CE71DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift */,
 				1F81BC1B1DC9F3FF004F3433 /* IconFontSpec.swift */,
+				1F5DDCDC1DDC6BE0002412EA /* NumberFormatterExtensionsSpec.swift */,
+				1F5DDCE01DDC948F002412EA /* DateComponentsFormatterExtensionSpec.swift */,
+				1F5DDCE41DDC9B7E002412EA /* ByteCountFormatterExtensionSpec.swift */,
 			);
 			path = bytesTests;
 			sourceTree = "<group>";
@@ -212,6 +226,9 @@
 				7510AF6D1DC8C89A000E3314 /* UIApplicationExtensions.swift */,
 				1F27173A1DC8A9C700DD4318 /* UIColorExtensions.swift */,
 				7510AF731DC8E5F5000E3314 /* DateFormatterExtensions.swift */,
+				1F5DDCD61DDC66B7002412EA /* NumberFormatterExtension.swift */,
+				1F5DDCDE1DDC9477002412EA /* DateComponentsFormatterExtensions.swift */,
+				1F5DDCE21DDC9B5F002412EA /* ByteCountFormatterExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -420,9 +437,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5DDCDF1DDC9477002412EA /* DateComponentsFormatterExtensions.swift in Sources */,
 				7510AF6E1DC8C89A000E3314 /* UIApplicationExtensions.swift in Sources */,
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
 				1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */,
+				1F5DDCD71DDC66B7002412EA /* NumberFormatterExtension.swift in Sources */,
 				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
 				75033E3D1DC1F3D1003BDAB2 /* UIViewExtensions.swift in Sources */,
@@ -430,6 +449,7 @@
 				1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */,
 				7510AF6C1DC8ACBA000E3314 /* UIDeviceExtensions.swift in Sources */,
 				1F27173B1DC8A9C700DD4318 /* UIColorExtensions.swift in Sources */,
+				1F5DDCE31DDC9B5F002412EA /* ByteCountFormatterExtensions.swift in Sources */,
 				9EA85DBE1DC37E18001EA93D /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,14 +458,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FF0F1071DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
 				9E858CE81DC8E7B8008BA84C /* UIColorHexStringExtensionSpec.swift in Sources */,
 				1F3B9E9C1DCB818700727379 /* UIViewExtensionsSpec.swift in Sources */,
+				1F5DDCDD1DDC6BE0002412EA /* NumberFormatterExtensionsSpec.swift in Sources */,
 				1F3B9EA01DCB81A400727379 /* DiscardTouchViewSpec.swift in Sources */,
 				1F3B9EA41DCB85ED00727379 /* UIImageExtensionSpec.swift in Sources */,
+				1F5DDCE11DDC948F002412EA /* DateComponentsFormatterExtensionSpec.swift in Sources */,
 				1F3B9E9E1DCB819500727379 /* UIDeviceExtensionsSpec.swift in Sources */,
 				1F3B9EA31DCB81F100727379 /* DateFormatterExtensionsSpec.swift in Sources */,
 				1F3B9E9B1DCB817500727379 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
+				1F5DDCE51DDC9B7E002412EA /* ByteCountFormatterExtensionSpec.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
 				1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* UIApplicationExtensionsSpec.swift in Sources */,
