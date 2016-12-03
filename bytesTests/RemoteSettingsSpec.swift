@@ -18,19 +18,28 @@ class RemoteSettingsSpec: QuickSpec {
                 let setting = RemoteSettings(remote: URL(string: "http://tbointeractive.com")!)
                 expect(setting).toNot(beNil())
             }
-            it("shouldCache per default") {
-                let setting = RemoteSettings(remote: URL(string: "http://tbointeractive.com")!)
-                expect(setting.shouldCache).to(beTrue())
-            }
             it("should use the NSURLSessionDataFetcher per default") {
                 let setting = RemoteSettings(remote: URL(string: "http://tbointeractive.com")!)
                 expect(setting.fetcher as? URLSessionDataFetcher).toNot(beNil())
             }
             it("should initialize data if there is a local file url") {
-                let local = Fixture(name: "json")?.url
+                let fetcher = FixtureDataFetcher(fixture: Fixture(name: "json"))
                 let remote = URL(string: "http://tbointeractive.com")!
-                let setting = SpecableRemoteSettings(remote: remote, local: local)
+                let setting = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher)
                 expect(setting.updateData).toNot(beNil())
+            }
+            it("doesn't perform an update") {
+                let fetcher = FixtureDataFetcher(fixture: Fixture(name: "json"))
+                let remote = URL(string: "http://tbointeractive.com")!
+                let _ = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher)
+                expect(fetcher.fetchedData).to(beNil())
+            }
+            it("should priorize data from cache over local data") {
+                let fetcher = FixtureDataFetcher(fixtureName: "json-array", cachedFixtureName: "json-dictionary")
+                let remote = URL(string: "http://tbointeractive.com")!
+                let settings = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher)
+                expect(settings.updateData).to(equal(fetcher.cached?.data))
+                expect(settings.updateData).toNot(equal(fetcher.fixture?.data))
             }
         }
         describe("update") {
