@@ -44,6 +44,17 @@
 		1FF0F0EA1DBF4F61002BE0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E81DBF4F61002BE0C9 /* LaunchScreen.storyboard */; };
 		1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */; };
 		1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */; };
+		75E3ACAF1DF6C00E0031C191 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACA71DF6C00E0031C191 /* Fixture.swift */; };
+		75E3ACB01DF6C00E0031C191 /* FixtureDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACA81DF6C00E0031C191 /* FixtureDataFetcher.swift */; };
+		75E3ACB11DF6C00E0031C191 /* json-array.fixture in Resources */ = {isa = PBXBuildFile; fileRef = 75E3ACA91DF6C00E0031C191 /* json-array.fixture */; };
+		75E3ACB21DF6C00E0031C191 /* json-dictionary.fixture in Resources */ = {isa = PBXBuildFile; fileRef = 75E3ACAA1DF6C00E0031C191 /* json-dictionary.fixture */; };
+		75E3ACB31DF6C00E0031C191 /* json-invalid.fixture in Resources */ = {isa = PBXBuildFile; fileRef = 75E3ACAB1DF6C00E0031C191 /* json-invalid.fixture */; };
+		75E3ACB41DF6C00E0031C191 /* json.fixture in Resources */ = {isa = PBXBuildFile; fileRef = 75E3ACAC1DF6C00E0031C191 /* json.fixture */; };
+		75E3ACB51DF6C00E0031C191 /* JSONRemoteSettingsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACAD1DF6C00E0031C191 /* JSONRemoteSettingsSpec.swift */; };
+		75E3ACB61DF6C00E0031C191 /* RemoteSettingsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACAE1DF6C00E0031C191 /* RemoteSettingsSpec.swift */; };
+		75E3ACBB1DF6C04A0031C191 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACB81DF6C04A0031C191 /* DataFetcher.swift */; };
+		75E3ACBC1DF6C04A0031C191 /* JSONRemoteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACB91DF6C04A0031C191 /* JSONRemoteSettings.swift */; };
+		75E3ACBD1DF6C04A0031C191 /* RemoteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACBA1DF6C04A0031C191 /* RemoteSettings.swift */; };
 		9E858CE81DC8E7B8008BA84C /* UIColor+HexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */; };
 		9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */; };
 		BC2A29C285BD969EF2DE3FF9 /* Pods_bytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE915E8665E4B0FA96257175 /* Pods_bytes.framework */; };
@@ -102,6 +113,17 @@
 		7510AF711DC8D5E9000E3314 /* UIDevice+IdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+IdentifierSpec.swift"; sourceTree = "<group>"; };
 		7510AF751DC90145000E3314 /* DateFormatter+PreconfiguredSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+PreconfiguredSpec.swift"; sourceTree = "<group>"; };
 		75BB7BED1DC240E70078A853 /* UIView+ConstraintsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintsSpec.swift"; sourceTree = "<group>"; };
+		75E3ACA71DF6C00E0031C191 /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		75E3ACA81DF6C00E0031C191 /* FixtureDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureDataFetcher.swift; sourceTree = "<group>"; };
+		75E3ACA91DF6C00E0031C191 /* json-array.fixture */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "json-array.fixture"; sourceTree = "<group>"; };
+		75E3ACAA1DF6C00E0031C191 /* json-dictionary.fixture */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "json-dictionary.fixture"; sourceTree = "<group>"; };
+		75E3ACAB1DF6C00E0031C191 /* json-invalid.fixture */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "json-invalid.fixture"; sourceTree = "<group>"; };
+		75E3ACAC1DF6C00E0031C191 /* json.fixture */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.fixture; sourceTree = "<group>"; };
+		75E3ACAD1DF6C00E0031C191 /* JSONRemoteSettingsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRemoteSettingsSpec.swift; sourceTree = "<group>"; };
+		75E3ACAE1DF6C00E0031C191 /* RemoteSettingsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSettingsSpec.swift; sourceTree = "<group>"; };
+		75E3ACB81DF6C04A0031C191 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		75E3ACB91DF6C04A0031C191 /* JSONRemoteSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRemoteSettings.swift; sourceTree = "<group>"; };
+		75E3ACBA1DF6C04A0031C191 /* RemoteSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSettings.swift; sourceTree = "<group>"; };
 		9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexSpec.swift"; sourceTree = "<group>"; };
 		9EA85DBF1DC38700001EA93D /* UIImage+TransformationsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TransformationsSpec.swift"; sourceTree = "<group>"; };
 		9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +166,8 @@
 		1F05843D1DF6006A0007E0DA /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				75E3ACAD1DF6C00E0031C191 /* JSONRemoteSettingsSpec.swift */,
+				75E3ACAE1DF6C00E0031C191 /* RemoteSettingsSpec.swift */,
 				1FF0F1061DBFABAA002BE0C9 /* ArrayTableViewDatasourceDataStub.swift */,
 				1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */,
 				1F5DDCE41DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift */,
@@ -202,6 +226,7 @@
 		1FF0F0F31DBF4F61002BE0C9 /* bytesTests */ = {
 			isa = PBXGroup;
 			children = (
+				75E3ACB71DF6C02E0031C191 /* Fixture */,
 				1F05843D1DF6006A0007E0DA /* Specs */,
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
 				9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */,
@@ -212,6 +237,7 @@
 		1FF0F0FF1DBF9A39002BE0C9 /* bytes */ = {
 			isa = PBXGroup;
 			children = (
+				75E3ACBE1DF6C08A0031C191 /* RemoteSettings */,
 				75033E3B1DC1F3B9003BDAB2 /* Extensions */,
 				1FF0F1001DBF9A42002BE0C9 /* ArrayDatasource */,
 				1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */,
@@ -254,6 +280,29 @@
 				1F8C5DA21DF5A38000403AA9 /* URL+QueryItems.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		75E3ACB71DF6C02E0031C191 /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				75E3ACA71DF6C00E0031C191 /* Fixture.swift */,
+				75E3ACA81DF6C00E0031C191 /* FixtureDataFetcher.swift */,
+				75E3ACA91DF6C00E0031C191 /* json-array.fixture */,
+				75E3ACAA1DF6C00E0031C191 /* json-dictionary.fixture */,
+				75E3ACAB1DF6C00E0031C191 /* json-invalid.fixture */,
+				75E3ACAC1DF6C00E0031C191 /* json.fixture */,
+			);
+			name = Fixture;
+			sourceTree = "<group>";
+		};
+		75E3ACBE1DF6C08A0031C191 /* RemoteSettings */ = {
+			isa = PBXGroup;
+			children = (
+				75E3ACB81DF6C04A0031C191 /* DataFetcher.swift */,
+				75E3ACB91DF6C04A0031C191 /* JSONRemoteSettings.swift */,
+				75E3ACBA1DF6C04A0031C191 /* RemoteSettings.swift */,
+			);
+			name = RemoteSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +406,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */,
+				75E3ACB41DF6C00E0031C191 /* json.fixture in Resources */,
+				75E3ACB11DF6C00E0031C191 /* json-array.fixture in Resources */,
+				75E3ACB21DF6C00E0031C191 /* json-dictionary.fixture in Resources */,
+				75E3ACB31DF6C00E0031C191 /* json-invalid.fixture in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E3ACBD1DF6C04A0031C191 /* RemoteSettings.swift in Sources */,
 				1F0584311DF5FF9E0007E0DA /* UIApplication+Identifier.swift in Sources */,
 				1F0584361DF5FFA80007E0DA /* DateFormatter+Preconfigured.swift in Sources */,
 				1F8C5DA31DF5A38100403AA9 /* URL+QueryItems.swift in Sources */,
@@ -468,6 +522,7 @@
 				1F05843C1DF5FFED0007E0DA /* UIColor+Components.swift in Sources */,
 				1F05842E1DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift in Sources */,
 				1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */,
+				75E3ACBC1DF6C04A0031C191 /* JSONRemoteSettings.swift in Sources */,
 				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
 				1F0584241DF313FE0007E0DA /* UIViewController+Hierarchie.swift in Sources */,
@@ -475,6 +530,7 @@
 				1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */,
 				1F0584381DF5FFA80007E0DA /* UIView+Constraints.swift in Sources */,
 				1F05843A1DF5FFB60007E0DA /* UIImage+Transformations.swift in Sources */,
+				75E3ACBB1DF6C04A0031C191 /* DataFetcher.swift in Sources */,
 				1F0584371DF5FFA80007E0DA /* UIDevice+Identifier.swift in Sources */,
 				1F05842F1DF5FF9E0007E0DA /* DateComponentsFormatter+Preconfigured.swift in Sources */,
 			);
@@ -489,17 +545,21 @@
 				1F5DDCDD1DDC6BE0002412EA /* NumberFormatter+PreconfiguredSpec.swift in Sources */,
 				1F3B9EA01DCB81A400727379 /* DiscardTouchViewSpec.swift in Sources */,
 				1F3B9EA41DCB85ED00727379 /* UIImage+TransformationsSpec.swift in Sources */,
+				75E3ACB01DF6C00E0031C191 /* FixtureDataFetcher.swift in Sources */,
 				1F5DDCE11DDC948F002412EA /* DateComponentsFormatter+PreconfiguredSpec.swift in Sources */,
 				1F3B9E9E1DCB819500727379 /* UIDevice+IdentifierSpec.swift in Sources */,
+				75E3ACB51DF6C00E0031C191 /* JSONRemoteSettingsSpec.swift in Sources */,
 				1F3B9EA31DCB81F100727379 /* DateFormatter+PreconfiguredSpec.swift in Sources */,
 				1F3B9E9B1DCB817500727379 /* ArrayTableViewDatasourceDataStub.swift in Sources */,
 				1F5DDCE51DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift in Sources */,
 				1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */,
 				1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */,
 				1F8C5DA51DF5A3A000403AA9 /* URL+QueryItemsSpec.swift in Sources */,
+				75E3ACAF1DF6C00E0031C191 /* Fixture.swift in Sources */,
 				1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* UIApplication+IdentifierSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColor+ComponentsSpec.swift in Sources */,
+				75E3ACB61DF6C00E0031C191 /* RemoteSettingsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
