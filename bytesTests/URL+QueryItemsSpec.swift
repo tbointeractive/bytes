@@ -17,22 +17,29 @@ class URLExtensionSpec: QuickSpec {
             it("should add query parameters") {
                 let url = URL(string: "http://tbointeractive.com")!
                 let added = url.adding(query: ["a": "b"])
-                expect(added?.absoluteString).to(equal("http://tbointeractive.com?a=b"))
+                expect(added.absoluteString).to(equal("http://tbointeractive.com?a=b"))
             }
             it("should encode keys and values") {
                 let url = URL(string: "http://tbointeractive.com")!
                 let added = url.adding(query: ["a a": "b b"])
-                expect(added?.absoluteString).to(equal("http://tbointeractive.com?a%20a=b%20b"))
+                expect(added.absoluteString).to(equal("http://tbointeractive.com?a%20a=b%20b"))
             }
             context("to a url that has parameters") {
                 let url = URL(string: "http://tbointeractive.com?a=b&c=c")!
                 it("should add query parameters to a url that already has some") {
                     let added = url.adding(query: ["e": "g"])
-                    expect(added?.absoluteString).to(equal("http://tbointeractive.com?a=b&c=c&e=g"))
+                    expect(added.absoluteString).to(equal("http://tbointeractive.com?a=b&c=c&e=g"))
                 }
                 it("should override existing parameters") {
                     let added = url.adding(query: ["c": "d"])
-                    expect(added?.absoluteString).to(equal("http://tbointeractive.com?a=b&c=d"))
+                    expect(added.absoluteString).to(equal("http://tbointeractive.com?a=b&c=d"))
+                }
+            }
+            context("to a url that is an absolutely malformed url") {
+                let url = URL(string: "foo://bar://baz://")!
+                it("should return a url unlike the original") {
+                    let added = url.adding(query: ["e": "g"])
+                    expect(added).toNot(equal(url))
                 }
             }
         }
@@ -40,12 +47,12 @@ class URLExtensionSpec: QuickSpec {
             it("should set query parameters") {
                 let url = URL(string: "http://tbointeractive.com")!
                 let added = url.setting(query: ["a": "b"])
-                expect(added?.absoluteString).to(equal("http://tbointeractive.com?a=b"))
+                expect(added.absoluteString).to(equal("http://tbointeractive.com?a=b"))
             }
             it("should replace existing query parameters") {
                 let url = URL(string: "http://tbointeractive.com?a=b")!
                 let added = url.setting(query: ["c": "d"])
-                expect(added?.absoluteString).to(equal("http://tbointeractive.com?c=d"))
+                expect(added.absoluteString).to(equal("http://tbointeractive.com?c=d"))
             }
         }
         describe("queryItems") {
