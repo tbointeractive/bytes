@@ -8,13 +8,15 @@
 
 import Foundation
 
+/// In theory there are situations where these methods simply return the unchanged url.
+/// Those cases are rare (we aren't aware of any) and are because of a weird, malformed url.
 public extension URL {
     
     /// Returns a new url where new URLQueryItem are added.
     ///
     /// - Parameter query: A dictionary representing query items to add.
     /// - Returns: A new URL.
-    func adding(query items: [String:String]) -> URL? {
+    func adding(query items: [String:String]) -> URL {
         let newQueryItems = URLQueryItem.items(items)
         let existingQueryItems = self.queryItems().filter({ !items.keys.contains($0.name) })
         return setting(existingQueryItems + newQueryItems)
@@ -24,7 +26,7 @@ public extension URL {
     ///
     /// - Parameter query: A dictionary representing query items to set.
     /// - Returns: A new URL.
-    func setting(query items: [String:String]) -> URL? {
+    func setting(query items: [String:String]) -> URL {
         return setting(URLQueryItem.items(items))
     }
     
@@ -42,12 +44,12 @@ public extension URL {
     ///
     /// - Parameter items: An Array of the new URLQueryItems.
     /// - Returns: A new URL.
-    private func setting(_ items: [URLQueryItem]) -> URL? {
+    private func setting(_ items: [URLQueryItem]) -> URL {
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
-            return nil
+            return self
         }
         components.queryItems = items
-        return components.url
+        return components.url ?? self
     }
 }
 
