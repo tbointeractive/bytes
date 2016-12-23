@@ -48,6 +48,11 @@
 		1FF0F0EA1DBF4F61002BE0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E81DBF4F61002BE0C9 /* LaunchScreen.storyboard */; };
 		1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1011DBF9A66002BE0C9 /* ArrayTableViewDatasource.swift */; };
 		1FF0F1051DBFA54C002BE0C9 /* ArrayTableViewDatasourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F1031DBFA46E002BE0C9 /* ArrayTableViewDatasourceSpec.swift */; };
+		75D456431E0D521400916BD8 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D456421E0D521400916BD8 /* Int+Random.swift */; };
+		75D456451E0D540C00916BD8 /* Int+RandomSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D456441E0D540C00916BD8 /* Int+RandomSpec.swift */; };
+		75D456471E0D5F2C00916BD8 /* Bool+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D456461E0D5F2C00916BD8 /* Bool+Random.swift */; };
+		75D4564B1E0D67A300916BD8 /* String+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4564A1E0D67A300916BD8 /* String+Random.swift */; };
+		75D4564D1E0D69BA00916BD8 /* String+RandomSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4564C1E0D69BA00916BD8 /* String+RandomSpec.swift */; };
 		75E3ACAF1DF6C00E0031C191 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACA71DF6C00E0031C191 /* Fixture.swift */; };
 		75E3ACB01DF6C00E0031C191 /* FixtureDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACA81DF6C00E0031C191 /* FixtureDataFetcher.swift */; };
 		75E3ACB11DF6C00E0031C191 /* json-array.fixture in Resources */ = {isa = PBXBuildFile; fileRef = 75E3ACA91DF6C00E0031C191 /* json-array.fixture */; };
@@ -121,6 +126,11 @@
 		7510AF711DC8D5E9000E3314 /* UIDevice+IdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+IdentifierSpec.swift"; sourceTree = "<group>"; };
 		7510AF751DC90145000E3314 /* DateFormatter+PreconfiguredSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+PreconfiguredSpec.swift"; sourceTree = "<group>"; };
 		75BB7BED1DC240E70078A853 /* UIView+ConstraintsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintsSpec.swift"; sourceTree = "<group>"; };
+		75D456421E0D521400916BD8 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
+		75D456441E0D540C00916BD8 /* Int+RandomSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+RandomSpec.swift"; sourceTree = "<group>"; };
+		75D456461E0D5F2C00916BD8 /* Bool+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Random.swift"; sourceTree = "<group>"; };
+		75D4564A1E0D67A300916BD8 /* String+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Random.swift"; sourceTree = "<group>"; };
+		75D4564C1E0D69BA00916BD8 /* String+RandomSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RandomSpec.swift"; sourceTree = "<group>"; };
 		75E3ACA71DF6C00E0031C191 /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
 		75E3ACA81DF6C00E0031C191 /* FixtureDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixtureDataFetcher.swift; sourceTree = "<group>"; };
 		75E3ACA91DF6C00E0031C191 /* json-array.fixture */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "json-array.fixture"; sourceTree = "<group>"; };
@@ -194,6 +204,8 @@
 				75BB7BED1DC240E70078A853 /* UIView+ConstraintsSpec.swift */,
 				1F0584251DF316B60007E0DA /* UIViewController+HierarchieSpec.swift */,
 				1F8C5DA41DF5A3A000403AA9 /* URL+QueryItemsSpec.swift */,
+				75D456441E0D540C00916BD8 /* Int+RandomSpec.swift */,
+				75D4564C1E0D69BA00916BD8 /* String+RandomSpec.swift */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -290,6 +302,9 @@
 				1F0584351DF5FFA80007E0DA /* UIView+Constraints.swift */,
 				1F0584231DF313FE0007E0DA /* UIViewController+Hierarchie.swift */,
 				1F8C5DA21DF5A38000403AA9 /* URL+QueryItems.swift */,
+				75D456421E0D521400916BD8 /* Int+Random.swift */,
+				75D456461E0D5F2C00916BD8 /* Bool+Random.swift */,
+				75D4564A1E0D67A300916BD8 /* String+Random.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -529,6 +544,8 @@
 				1F0584311DF5FF9E0007E0DA /* UIApplication+Identifier.swift in Sources */,
 				1F0584361DF5FFA80007E0DA /* DateFormatter+Preconfigured.swift in Sources */,
 				1F5A94AD1DF8AB94002930CA /* AsyncViewController.swift in Sources */,
+				75D456471E0D5F2C00916BD8 /* Bool+Random.swift in Sources */,
+				75D456431E0D521400916BD8 /* Int+Random.swift in Sources */,
 				1F8C5DA31DF5A38100403AA9 /* URL+QueryItems.swift in Sources */,
 				1F0584301DF5FF9E0007E0DA /* NumberFormatter+Preconfigured.swift in Sources */,
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
@@ -539,6 +556,7 @@
 				75E3ACBC1DF6C04A0031C191 /* JSONRemoteSettings.swift in Sources */,
 				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
+				75D4564B1E0D67A300916BD8 /* String+Random.swift in Sources */,
 				1F0584241DF313FE0007E0DA /* UIViewController+Hierarchie.swift in Sources */,
 				1F0584321DF5FF9E0007E0DA /* UIColor+Hex.swift in Sources */,
 				1FF0F1021DBF9A67002BE0C9 /* ArrayTableViewDatasource.swift in Sources */,
@@ -558,6 +576,7 @@
 				1F3B9E9C1DCB818700727379 /* UIView+ConstraintsSpec.swift in Sources */,
 				1F5DDCDD1DDC6BE0002412EA /* NumberFormatter+PreconfiguredSpec.swift in Sources */,
 				1F3B9EA01DCB81A400727379 /* DiscardTouchViewSpec.swift in Sources */,
+				75D456451E0D540C00916BD8 /* Int+RandomSpec.swift in Sources */,
 				1F3B9EA41DCB85ED00727379 /* UIImage+TransformationsSpec.swift in Sources */,
 				75E3ACB01DF6C00E0031C191 /* FixtureDataFetcher.swift in Sources */,
 				1F5DDCE11DDC948F002412EA /* DateComponentsFormatter+PreconfiguredSpec.swift in Sources */,
@@ -572,6 +591,7 @@
 				1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */,
 				1F8C5DA51DF5A3A000403AA9 /* URL+QueryItemsSpec.swift in Sources */,
 				75E3ACAF1DF6C00E0031C191 /* Fixture.swift in Sources */,
+				75D4564D1E0D69BA00916BD8 /* String+RandomSpec.swift in Sources */,
 				1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* UIApplication+IdentifierSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColor+ComponentsSpec.swift in Sources */,
