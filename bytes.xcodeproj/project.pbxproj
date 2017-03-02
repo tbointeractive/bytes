@@ -66,6 +66,8 @@
 		75E3ACBB1DF6C04A0031C191 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACB81DF6C04A0031C191 /* DataFetcher.swift */; };
 		75E3ACBC1DF6C04A0031C191 /* JSONRemoteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACB91DF6C04A0031C191 /* JSONRemoteSettings.swift */; };
 		75E3ACBD1DF6C04A0031C191 /* RemoteSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E3ACBA1DF6C04A0031C191 /* RemoteSettings.swift */; };
+		8C89DCFD1E68512D007FBAAA /* String+Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89DCFC1E68512D007FBAAA /* String+Hashes.swift */; };
+		8C95D7E71E67361A00B76612 /* String+HashesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95D7E61E67361A00B76612 /* String+HashesSpec.swift */; };
 		9E858CE81DC8E7B8008BA84C /* UIColor+HexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */; };
 		9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */; };
 		BC2A29C285BD969EF2DE3FF9 /* Pods_bytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE915E8665E4B0FA96257175 /* Pods_bytes.framework */; };
@@ -146,6 +148,8 @@
 		75E3ACB81DF6C04A0031C191 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		75E3ACB91DF6C04A0031C191 /* JSONRemoteSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRemoteSettings.swift; sourceTree = "<group>"; };
 		75E3ACBA1DF6C04A0031C191 /* RemoteSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSettings.swift; sourceTree = "<group>"; };
+		8C89DCFC1E68512D007FBAAA /* String+Hashes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Hashes.swift"; path = "bytes/Extensions/String+Hashes.swift"; sourceTree = "<group>"; };
+		8C95D7E61E67361A00B76612 /* String+HashesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HashesSpec.swift"; sourceTree = "<group>"; };
 		9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexSpec.swift"; sourceTree = "<group>"; };
 		9EA85DBF1DC38700001EA93D /* UIImage+TransformationsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TransformationsSpec.swift"; sourceTree = "<group>"; };
 		9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				75D456441E0D540C00916BD8 /* Int+RandomSpec.swift */,
 				75DBFFF11E098B94000F43C1 /* Dictionary+MergeSpecs.swift */,
 				75D4564C1E0D69BA00916BD8 /* String+RandomSpec.swift */,
+				8C95D7E61E67361A00B76612 /* String+HashesSpec.swift */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				75D456461E0D5F2C00916BD8 /* Bool+Random.swift */,
 				75DBFFEF1E098A46000F43C1 /* Dictionary+Merge.swift */,
 				75D4564A1E0D67A300916BD8 /* String+Random.swift */,
+				8C89DCFC1E68512D007FBAAA /* String+Hashes.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -394,10 +400,12 @@
 				TargetAttributes = {
 					1FF0F0DB1DBF4F61002BE0C9 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					1FF0F0EF1DBF4F61002BE0C9 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1FF0F0DB1DBF4F61002BE0C9;
 					};
@@ -561,6 +569,7 @@
 				1F05842E1DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift in Sources */,
 				1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */,
 				1F3CA5821E07147C00121FDC /* SemanticVersion.swift in Sources */,
+				8C89DCFD1E68512D007FBAAA /* String+Hashes.swift in Sources */,
 				75E3ACBC1DF6C04A0031C191 /* JSONRemoteSettings.swift in Sources */,
 				1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */,
 				1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */,
@@ -588,6 +597,7 @@
 				1F3B9EA41DCB85ED00727379 /* UIImage+TransformationsSpec.swift in Sources */,
 				75E3ACB01DF6C00E0031C191 /* FixtureDataFetcher.swift in Sources */,
 				1F5DDCE11DDC948F002412EA /* DateComponentsFormatter+PreconfiguredSpec.swift in Sources */,
+				8C95D7E71E67361A00B76612 /* String+HashesSpec.swift in Sources */,
 				1F5A94AF1DF8ABC8002930CA /* AsyncViewControllerSpec.swift in Sources */,
 				1F3B9E9E1DCB819500727379 /* DeviceSpec.swift in Sources */,
 				1F3CA5841E07148C00121FDC /* SemanticVersionSpec.swift in Sources */,
@@ -682,6 +692,14 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${SRCROOT}/Cocoapods/appletvos";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${SRCROOT}/Cocoapods/appletvsimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${SRCROOT}/Cocoapods/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${SRCROOT}/Cocoapods/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=macosx*]" = "${SRCROOT}/Cocoapods/macosx";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${SRCROOT}/Cocoapods/watchos";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${SRCROOT}/Cocoapods/watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -724,6 +742,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = "${SRCROOT}/Cocoapods/appletvos";
+				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = "${SRCROOT}/Cocoapods/appletvsimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "${SRCROOT}/Cocoapods/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "${SRCROOT}/Cocoapods/iphonesimulator";
+				"SWIFT_INCLUDE_PATHS[sdk=macosx*]" = "${SRCROOT}/Cocoapods/macosx";
+				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = "${SRCROOT}/Cocoapods/watchos";
+				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = "${SRCROOT}/Cocoapods/watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -735,11 +760,14 @@
 			baseConfigurationReference = 52FABA55EBADF56EF8C67F6B /* Pods-bytes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = bytes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.bytes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -749,11 +777,13 @@
 			baseConfigurationReference = E20C79CAD39B8DA3FB1F0A9D /* Pods-bytes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = bytes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.bytes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -765,11 +795,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = bytesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.bytesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bytes.app/bytes";
 			};
@@ -782,6 +814,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = bytesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
