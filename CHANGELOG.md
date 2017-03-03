@@ -2,10 +2,13 @@
 
 ## unreleased
 
+## 0.2
+* **feature** String extension for generating hashes from a string
+
 ## 0.1
 * **feature** UIColor extension that allows initializing from a hex string
 * **feature** UIColor extension that allows setting color-channel values
-* **feature** IconFont; A class that helps handling icon fonts. 
+* **feature** IconFont; A class that helps handling icon fonts.
 * **feature** DateFormatter extension with formatters for common tasks
 * **feature** UIApplication extension for several properties such as `bundleDisplayName` and `bundleVersion`
 * **feature** UIDevice extension with `platformName`, `humanReadablePlatformName` and `osVersion`
