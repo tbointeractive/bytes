@@ -3,7 +3,16 @@
 ## unreleased
 
 ## 0.2
-* **feature** String extension for generating hashes from a string
+* **feature** Added AsyncViewController
+* **feature** Added RemoteSettings to fetch and store remote configurations
+* **feature** Added SemanticVersion support
+* **feature** ByteCountFormatter extension with default count styles
+* **feature** DateComponentsFormatter extension with multiple display types for a time
+* **feature** Moved UIApplication and UIDevice extensions into their own structs
+* **feature** NumberFormatter extension with fractionDigits
+* **feature** String extension for generating hashes of a string
+* **feature** UIViewController extension for adding an child view with constrained edges
+* **feature** URL extension for handling query parameter
 
 ## 0.1
 * **feature** UIColor extension that allows initializing from a hex string
