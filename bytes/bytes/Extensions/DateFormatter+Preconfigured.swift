@@ -24,7 +24,7 @@ extension DateFormatter {
     /// The default time zone is GMT
     static public let iso8601Formatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        // This is to macht the ISO8601DateFormatter default format and timeZone
+        // This is to match the ISO8601DateFormatter default format and timeZone
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         return dateFormatter

@@ -10,11 +10,11 @@ test_ios10.1:
   stage: test
   script:
     - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
-    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.1' | xcpretty -s
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' | xcpretty -s
   tags:
     - macos
     - xcode
-    - ios10.1
+    - ios10.2
     - cocoapods
   cache:
     paths:

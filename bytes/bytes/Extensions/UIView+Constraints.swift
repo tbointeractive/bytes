@@ -63,6 +63,7 @@ extension UIView {
     ///
     /// - Parameter view: The UIView to which edges this view should be contrainted
     public func constrainEdges(to view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
         constrainEqual(attribute: .top, to: view)
         constrainEqual(attribute: .leading, to: view)
         constrainEqual(attribute: .trailing, to: view)
@@ -73,6 +74,7 @@ extension UIView {
     ///
     /// - Parameter view: The UIView to which margings this view should be contrainted 
     public func constrainEdges(toMarginOf view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
         constrain(.top, to: view, attribute: .topMargin, relation: .equal)
         constrain(.leading, to: view, attribute: .leadingMargin, relation: .equal)
         constrain(.trailing, to: view, attribute: .trailingMargin, relation: .equal)
