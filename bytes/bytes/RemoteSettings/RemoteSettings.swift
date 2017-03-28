@@ -106,7 +106,7 @@ open class RemoteSettings {
 }
 
 
-extension RemoteSettings {
+public extension RemoteSettings {
     /// Errors that can happen during the update process.
     enum UpdateError: Error {
         /// It was impossible to fetch the data from the remote source.
