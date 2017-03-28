@@ -12,7 +12,7 @@ import Foundation
 /// It offers two specialized update methods that serve a dictionary or an array.
 /// This class is designed to be overridden, especially the 
 /// `update(_ data: [AnyHashable: Any]) throws` and `update(_ data: [Any]) throws` methods.
-public class JSONRemoteSettings: RemoteSettings {
+open class JSONRemoteSettings: RemoteSettings {
     
     /// This method expects a Data object, parses it and uses the
     /// `update(_ data: [AnyHashable: Any])` and `update(_ data: [Any])`

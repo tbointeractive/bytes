@@ -11,7 +11,7 @@ import Foundation
 /// Settings that are possibly updated from a remote source.
 /// This class is designed to be overridden, especially the `update(_ data: Data) throws` method.
 /// There are specialized implementations such as `JSONRemoteSettings` which already parses the JSON data.
-public class RemoteSettings {
+open class RemoteSettings {
     
     /// The Completionblock for the update process.
     /// If the error is set no changes have been made.
