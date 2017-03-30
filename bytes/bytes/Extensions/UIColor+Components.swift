@@ -18,7 +18,7 @@ extension UIColor {
     ///   - blue: the new value for the blue portion
     ///   - alpha: the new value for the alpha portion
     /// - Returns: a new color with all of the new values set
-    func setting(red: CGFloat? = nil, green: CGFloat? = nil, blue: CGFloat? = nil, alpha: CGFloat? = nil) -> UIColor {
+    public func setting(red: CGFloat? = nil, green: CGFloat? = nil, blue: CGFloat? = nil, alpha: CGFloat? = nil) -> UIColor {
         var oldRed: CGFloat = 0.0
         var oldGreen: CGFloat = 0.0
         var oldBlue: CGFloat = 0.0
