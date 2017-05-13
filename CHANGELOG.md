@@ -2,6 +2,8 @@
 
 ## unreleased
 
+* **feature** Added function to shuffle an Array/NSArray.
+
 ## 0.2
 * **feature** Added AsyncViewController
 * **feature** Added RemoteSettings to fetch and store remote configurations
