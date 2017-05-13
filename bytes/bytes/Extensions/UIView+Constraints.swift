@@ -11,11 +11,10 @@ import UIKit
 extension UIView {
     /// Add an equal constraint from this view to another view
     ///
-    /// - Parameters:
-    ///   - attribute: The layout attribute to be used
-    ///   - to: Target object
-    ///   - multiplier: The multiplier (default = 1)
-    ///   - constant: The constant value (default = 0)
+    /// - parameter attribute: The layout attribute to be used
+    /// - parameter to: Target object
+    /// - parameter multiplier: The multiplier (default = 1)
+    /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
     @discardableResult public func constrainEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .equal, multiplier: multiplier, constant: constant)
@@ -33,11 +32,10 @@ extension UIView {
     
     /// A a constraint with lessThanOrEqual relation
     ///
-    /// - Parameters:
-    ///   - attribute: The layout attribute to be used
-    ///   - to: Target object
-    ///   - multiplier: The multiplier (default = 1)
-    ///   - constant: The constant value (default = 0)
+    /// - parameter attribute: The layout attribute to be used
+    /// - parameter to: Target object
+    /// - parameter multiplier: The multiplier (default = 1)
+    /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
     @discardableResult public func constrainLessThanOrEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .lessThanOrEqual, multiplier: multiplier, constant: constant)
@@ -45,11 +43,10 @@ extension UIView {
     
     /// Add a greaterThanOrEqual constraint from this view to another view
     ///
-    /// - Parameters:
-    ///   - attribute: The layout attribute to be used
-    ///   - to: Target object
-    ///   - multiplier: The multiplier (default = 1)
-    ///   - constant: The constant value (default = 0)
+    /// - parameter attribute: The layout attribute to be used
+    /// - parameter to: Target object
+    /// - parameter multiplier: The multiplier (default = 1)
+    /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
     @discardableResult public func constrainGreaterThanOrEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .greaterThanOrEqual, multiplier: multiplier, constant: constant)
@@ -57,13 +54,12 @@ extension UIView {
     
     /// Add a constraint from this view to another view
     ///
-    /// - Parameters:
-    ///   - attribute: A NSLayoutAttribute layout attribute for this view
-    ///   - to: optional Target object
-    ///   - toAttribute: A NSLayoutAttribute for the target object
-    ///   - relation: A NSLayoutRelation (default = .equal)
-    ///   - multiplier: The multiplier (default = 1)
-    ///   - constant: The constant value (default = 0)
+    /// - parameter attribute: A NSLayoutAttribute layout attribute for this view
+    /// - parameter to: optional Target object
+    /// - parameter toAttribute: A NSLayoutAttribute for the target object
+    /// - parameter relation: A NSLayoutRelation (default = .equal)
+    /// - parameter multiplier: The multiplier (default = 1)
+    /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
     @discardableResult public func constrain(_ attribute: NSLayoutAttribute, to: UIView?, attribute toAttribute: NSLayoutAttribute, relation: NSLayoutRelation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: relation, toItem: to, attribute: toAttribute, multiplier: multiplier, constant: constant)

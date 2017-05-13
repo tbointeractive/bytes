@@ -11,15 +11,15 @@ import UIKit
 
 /// A DiscardTouchView is a view that can be configured to discard all
 /// touches that hit the view itself but don't hit any subviews
-class DiscardTouchView: UIView {
+public class DiscardTouchView: UIView {
     
-    /// configures whether the view should discard all touches sent to it
-    /// or to absorb them
+    /// Configures whether the view should discard all touches sent to it
+    /// or to absorb them.
     ///
     /// default = true
-    var discardsTouches: Bool = true
+    public var discardsTouches: Bool = true
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let hitView = super.hitTest(point, with: event)
         if hitView == self && discardsTouches {
             return nil

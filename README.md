@@ -2,10 +2,6 @@
 
 [![build status](http://git.tbointeractive.com/chorstmann/bytes/badges/develop/build.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/develop)
 [![coverage report](http://git.tbointeractive.com/chorstmann/bytes/badges/develop/coverage.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/develop)
-<!--
-[![License](http://img.shields.io/cocoapods/l/bytes.svg?style=flat)](http://choosealicense.com/licenses/mit/)
-[![Platform](http://img.shields.io/cocoapods/p/bytes.svg?style=flat)](http://cocoadocs.org/docsets/bytes/)
--->
 
 **bytes** is a set of tools to cover many all-day tasks in iOS development.
 

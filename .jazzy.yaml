@@ -1,15 +1,17 @@
 module: bytes
-module_version: 1.0
+module_version: 0.1
 author: TBO Interactive GmbH & Co. KG
 author_url: http://www.tbointeractive.com
-copyright: '© 2016 [TBO Interactive GmbH & Co. KG](http://www.tbointeractive.com).'
+copyright: '© 2017 [TBO Interactive GmbH & Co. KG](http://www.tbointeractive.com).'
 
 # github_url: https://github.com/...
 clean: true
 
-#podspec: Bytes.podspec
+# podspec: bytes.podspec
 
-#excluded_files: Example/
+exclude:
+  - ViewController.swift
+  - AppDelegate.swift
 
 # swift_version: 3.0  # disabled due to https://github.com/realm/jazzy/issues/656
 

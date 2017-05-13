@@ -70,7 +70,7 @@ generate_documentation:
     - master
     - develop
   script:
-    - jazzy
+    - jazzy -x -workspace,bytes.xcworkspace,-scheme,bytes
   artifacts:
     paths:
       - docs
