@@ -64,7 +64,7 @@ public class AsyncViewController: UIViewController {
     ///   Expect the closure to be called multiple times due to retries for example. The load
     ///   closure should will be called from the main thread and should not block it. It will be
     ///   called automatically on `viewWillAppear`.
-    init(load: @escaping (_ async: AsyncViewController) -> ()) {
+    public init(load: @escaping (_ async: AsyncViewController) -> ()) {
         self.load = load
         self.state = .idle
         super.init(nibName: nil, bundle: nil)
