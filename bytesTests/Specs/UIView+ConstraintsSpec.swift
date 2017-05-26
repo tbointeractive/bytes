@@ -44,6 +44,14 @@ class UIViewExtensionsSpec: QuickSpec {
                 expect(constraint?.relation.rawValue).to(equal(0))
             }
         }
+        describe("constrainEqual Constant") {
+            it("") {
+                let view = UIView(frame: CGRect(x:0, y:0, width: 10, height:10))
+                view.constrainEqual(attribute: .height, to: 100)
+                let constraint = view.constraints.first as NSLayoutConstraint?
+                expect(constraint?.constant).to(equal(100))
+            }
+        }
         describe("constrainLessThanOrEqual") {
             it("should add a LessThanOrEqual constraint to first view") {
                 let firstView = UIView(frame: CGRect(x:0, y:0, width: 10, height:10))
