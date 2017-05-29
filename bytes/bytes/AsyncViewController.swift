@@ -33,6 +33,9 @@ import UIKit
 ///
 /// - ToDo: We should add a method to show some kind of progress.
 public class AsyncViewController: UIViewController {
+
+    public typealias CancelClosure = () -> Void
+    public typealias LoadClosure = (_ async: AsyncViewController) -> (CancelClosure?)
     
     /// The state the AsyncViewController is currently in.
     public private(set) var state: State
@@ -55,16 +58,27 @@ public class AsyncViewController: UIViewController {
         label.text = "\(error)"
         return label
     }
-    
-    private let load: ((_ async: AsyncViewController)->())
-    
+
+    private var load: LoadClosure?
+
+    /// The cancelClosure is exectued when the AsyncViewController is deinitalized 
+    /// or the cancel() function is called
+    private var cancelClosure: CancelClosure?
+
+    deinit {
+        cancelClosure?()
+    }
+
     /// Initializes a new AsyncViewController.
     ///
     /// - Parameter load: The closure that should be executed to perform the asynchronous process.
     ///   Expect the closure to be called multiple times due to retries for example. The load
     ///   closure should will be called from the main thread and should not block it. It will be
     ///   called automatically on `viewWillAppear`.
-    public init(load: @escaping (_ async: AsyncViewController) -> ()) {
+    /// - Returns: Returns an optional CancelClosure which is executed when the AsyncViewController
+    ///   is deinitalized or the cancel function is called. Use the callback for cancelling
+    ///   the active process. E.g. a running network request should be cancelled.
+    public init(load: @escaping LoadClosure) {
         self.load = load
         self.state = .idle
         super.init(nibName: nil, bundle: nil)
@@ -88,7 +102,14 @@ public class AsyncViewController: UIViewController {
         state = .loading
         errorView?.removeFromSuperview()
         loadingView.isHidden = false
-        load(self)
+        cancelClosure = load?(self)
+    }
+    
+    /// Sets the state to .idle and calls the cancelClosure for cancelling the current process.
+    /// It will not change the visibility of the loading or error view.
+    public func cancel() {
+        state = .idle
+        cancelClosure?()
     }
     
     /// Finishes the loading process and displays the resulting ViewController.
@@ -100,6 +121,8 @@ public class AsyncViewController: UIViewController {
         guard [.loading].contains(state) else { return }
         state = .finished
         loadingView.isHidden = true
+        load = nil
+        cancelClosure = nil
         addChildViewController(contentViewController, constrainEdgesTo: view)
     }
     

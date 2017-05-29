@@ -15,25 +15,25 @@ class AsyncViewControllerSpec: QuickSpec {
     override func spec() {
         describe("init") {
             it("should initialize the object with a load closure") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 expect(async) != nil
             }
             it("should set the state to idle") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 expect(async.state) == AsyncViewController.State.idle
             }
             it("should have a view") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 expect(async.view) != nil
             }
             it("should only have a hidden loadingView as a subview") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 expect(async.view.subviews.count) == 1
                 expect(async.view.subviews.first) == async.loadingView
                 expect(async.view.subviews.first?.isHidden) == true
             }
             it("should not create a retain cycle") {
-                var async: AsyncViewController? = AsyncViewController() { _ in }
+                var async: AsyncViewController? = AsyncViewController() { _ in return nil }
                 weak var weakAsync = async
                 async = nil
                 expect(weakAsync).to(beNil())
@@ -41,6 +41,7 @@ class AsyncViewControllerSpec: QuickSpec {
             it("should not create a retain cycle when the load closure was called") {
                 var async: AsyncViewController? = AsyncViewController() { async in
                     let _ = async.state
+                     return nil
                 }
                 weak var weakAsync = async
                 async?.start()
@@ -53,6 +54,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 var calledLoad = false
                 let async = AsyncViewController() { _ in
                     calledLoad = true
+                    return nil
                 }
                 expect(calledLoad) == false
                 async.viewWillAppear(false)
@@ -64,24 +66,25 @@ class AsyncViewControllerSpec: QuickSpec {
                 var calledLoad = false
                 let async = AsyncViewController() { _ in
                     calledLoad = true
+                    return nil
                 }
                 expect(calledLoad) == false
                 async.start()
                 expect(calledLoad) == true
             }
             it("should set the state to loading") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 async.start()
                 expect(async.state) == AsyncViewController.State.loading
             }
             it("should display a loading view") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 async.start()
                 expect(async.view.subviews).to(contain(async.loadingView))
                 expect(async.loadingView.isHidden) == false
             }
             it("should hide an existing errorView") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 async.start()
                 async.fail(nil)
                 expect(async.state) == AsyncViewController.State.error
@@ -92,6 +95,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 var loadCallCount = 0
                 let async = AsyncViewController() { _ in
                     loadCallCount += 1
+                    return nil
                 }
                 async.start()
                 async.start()
@@ -101,6 +105,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 var loadCallCount = 0
                 let async = AsyncViewController() { _ in
                     loadCallCount += 1
+                    return nil
                 }
                 async.start()
                 async.finish(content: UIViewController())
@@ -111,14 +116,14 @@ class AsyncViewControllerSpec: QuickSpec {
         }
         describe("fail") {
             context("when the state is idle") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 it("should not change the state") {
                     async.fail(nil)
                     expect(async.state) == AsyncViewController.State.idle
                 }
             }
             context("when the state is finished") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 async.start()
                 async.finish(content: UIViewController())
                 it("should not change the state") {
@@ -129,7 +134,7 @@ class AsyncViewControllerSpec: QuickSpec {
             context("when the state is loading") {
                 var async: AsyncViewController!
                 beforeEach {
-                    async = AsyncViewController() { _ in }
+                    async = AsyncViewController() { _ in return nil }
                     async.start()
                 }
                 it("should set the state to error") {
@@ -150,7 +155,7 @@ class AsyncViewControllerSpec: QuickSpec {
         }
         describe("finish") {
             context("when the state is idle") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 it("should not change the state") {
                     async.finish(content: UIViewController())
                     expect(async.state) == AsyncViewController.State.idle
@@ -163,7 +168,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 }
             }
             context("when the state is finished") {
-                let async = AsyncViewController() { _ in }
+                let async = AsyncViewController() { _ in return nil }
                 async.start()
                 async.finish(content: UIViewController())
                 it("should not change the state") {
@@ -180,7 +185,7 @@ class AsyncViewControllerSpec: QuickSpec {
             context("when the state is loading") {
                 var async: AsyncViewController!
                 beforeEach {
-                    async = AsyncViewController() { _ in }
+                    async = AsyncViewController() { _ in return nil }
                     async.start()
                 }
                 it("should set the state to finished") {
@@ -197,6 +202,32 @@ class AsyncViewControllerSpec: QuickSpec {
                     expect(async.view.subviews).to(contain(viewController.view))
                     expect(viewController.parent).to(equal(async))
                 }
+            }
+        }
+        describe("cancel") {
+            context("should cancel when deinit") {
+                var isCancelled = false
+                var async:AsyncViewController? = AsyncViewController() { _ in
+                    let cancelClosure: AsyncViewController.CancelClosure = {
+                        isCancelled = true
+                    }
+                    return cancelClosure
+                }
+                async?.start()
+                async = nil
+                expect(isCancelled) == true
+            }
+            context("should cancel when cancel is called") {
+                var isCancelled = false
+                let async = AsyncViewController() { _ in
+                    let cancelClosure: AsyncViewController.CancelClosure = {
+                        isCancelled = true
+                    }
+                    return cancelClosure
+                }
+                async.start()
+                async.cancel()
+                expect(isCancelled) == true
             }
         }
     }
