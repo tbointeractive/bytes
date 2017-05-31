@@ -1,6 +1,7 @@
 # Changelog
 
 ## unreleased
+* **bugfix** Exposed UIColor hex convenience initializer
 
 ## 0.2
 * **feature** Added AsyncViewController
