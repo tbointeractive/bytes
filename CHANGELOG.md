@@ -1,9 +1,9 @@
 # Changelog
 
 ## unreleased
-* **bugfix** Exposed UIColor hex convenience initializer
-
 * **feature** Added function to shuffle an Array/NSArray.
+* **bugfix** Exposed UIColor hex convenience initializer
+* **bugfix** UIViewController addChildViewController extension will now call didMoveToParentViewController in the correct order
 
 ## 0.2
 * **feature** Added AsyncViewController
