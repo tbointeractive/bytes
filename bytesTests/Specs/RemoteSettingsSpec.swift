@@ -34,11 +34,14 @@ class RemoteSettingsSpec: QuickSpec {
                 let _ = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher)
                 expect(fetcher.fetchedData).to(beNil())
             }
-            it("should priorize data from cache over local data") {
-                let fetcher = FixtureDataFetcher(fixtureName: "json-array", cachedFixtureName: "json-dictionary")
+            it("should priorize data from the persister over local data") {
                 let remote = URL(string: "http://tbointeractive.com")!
-                let settings = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher)
-                expect(settings.updateData).to(equal(fetcher.cached?.data))
+                let persistedFixture = Fixture.init(name: "json-dictionary")!
+                let persister = TemporaryDataStorage(subfolder: "RemoteSettingsSpec")
+                let stored = persister.storeData(from: persistedFixture, for: remote)
+                let fetcher = FixtureDataFetcher(fixtureName: "json-array", cachedFixtureName: "json-dictionary")
+                let settings = SpecableRemoteSettings(remote: remote, local: fetcher.fixture?.url, fetcher: fetcher, persister: persister)
+                expect(settings.updateData).to(equal(persister.data(forKey: remote.absoluteString)))
                 expect(settings.updateData).toNot(equal(fetcher.fixture?.data))
             }
         }
