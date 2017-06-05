@@ -152,5 +152,15 @@ class DateFormatterExtensionsSpec: QuickSpec {
                 expect(dateString) == compareString
             }
         }
+        
+        describe("shortTime") {
+            it("should be correct time string for the reference date") {
+                let dateFormatter = DateFormatter.shortTime
+                let dateString = dateFormatter.string(for:self.referenceDate)
+                let compareFormatter = DateFormatter.shortTime(forLocale: Locale.current)
+                let compareString = compareFormatter.string(for:self.referenceDate)
+                expect(dateString) == compareString
+            }
+        }
     }
 }
