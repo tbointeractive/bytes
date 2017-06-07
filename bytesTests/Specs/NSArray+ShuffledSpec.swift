@@ -31,5 +31,12 @@ class NSArrayShuffledSpec: QuickSpec {
                 expect(shuffled.count) == nsarray.count
             }
         }
+        describe("random") {
+            it("should return an element of the original collection") {
+                let array = [0,1,2,3,4,5,6,7,8,9]
+                let element = array.random
+                expect(array.contains(element!)) == true
+            }
+        }
     }
 }
