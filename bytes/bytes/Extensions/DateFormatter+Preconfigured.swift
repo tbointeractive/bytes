@@ -55,6 +55,11 @@ extension DateFormatter {
         return DateFormatter.weekdaySingleLetter(forLocale: Locale.current)
     }()
     
+    /// A localized date formatter that returns the time in a short style i.a. "6:30 PM" that is preconfigured to the current locale.
+    static public let shortTime: DateFormatter = {
+        return DateFormatter.shortTime(forLocale: Locale.current)
+    }()
+    
     /// A date formatter for localized month and day representation i.e. "23.06." or "06/23"
     ///
     /// - Parameter locale: A Locale for the desired localization
@@ -97,6 +102,18 @@ extension DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEEE")
+        return dateFormatter
+    }
+
+    /// A localized date formatter that returns the time in a short style i.a. "6:30 PM"
+    ///
+    /// - Parameter locale: A Locale for the desired localization
+    /// - Returns: A new DateFormatter
+    static public func shortTime(forLocale locale: Locale) -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateStyle = .none
+        dateFormatter.locale = locale
         return dateFormatter
     }
 }
