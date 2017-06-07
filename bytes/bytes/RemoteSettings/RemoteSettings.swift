@@ -27,17 +27,21 @@ open class RemoteSettings {
     /// The DataFetcher to use for remote updates.
     public let fetcher: DataFetcher
     
+    /// The DataPersister to store fetched data.
+    public let persister: DataStorage
+    
     /// Initializes a new RemoteSettings Object.
     ///
     /// - Parameters:
     ///   - remote: The remote URL of the Settings.
     ///   - local: The local URL of the Settings. If set, the settings are initialized with the contents from this file.
     ///   - fetcher: The DataFetcher to use to fetch the data from the remote. If not set, a new NSURLSessionDataFetcher will be used.
-    required public init(remote: URL, local: URL? = nil, fetcher: DataFetcher = URLSessionDataFetcher()) {
+    required public init(remote: URL, local: URL? = nil, fetcher: DataFetcher = URLSessionDataFetcher(), persister: DataStorage = DocumentsFolderDataStorage(subfolder: "RemoteSettings")) {
         self.remote = remote
         self.local = local
         self.fetcher = fetcher
-        if let data = fetcher.cached(remote) ?? data(fileUrl: local) {
+        self.persister = persister
+        if let data = persister.data(forKey: remote.absoluteString) ?? data(fileUrl: local) {
             do {
                 try update(data)
             } catch {
@@ -84,6 +88,9 @@ open class RemoteSettings {
         fetcher.fetch(url) { data, fetchingError in
             if let data = data {
                 do {
+                    if !self.persister.store(data: data, forKey: url.absoluteString) {
+                        print("The DataPersister was unable to store data.")
+                    }
                     try self.update(data)
                     finished?(nil)
                 } catch {
