@@ -16,7 +16,7 @@ extension UIColor {
     /// - Parameter hexString: A hexadecimal String repesenting the color value.
     ///
     /// - Returns: An instance of UIColor
-    convenience init?(hexString: String) {
+    public convenience init?(hexString: String) {
         var hexInt: UInt32 = 0
         let scanner = Scanner(string: hexString)
         var stringLength = hexString.characters.count
