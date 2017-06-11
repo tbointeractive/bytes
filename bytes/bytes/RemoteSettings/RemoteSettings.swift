@@ -41,7 +41,7 @@ open class RemoteSettings {
         self.local = local
         self.fetcher = fetcher
         self.persister = persister
-        if let data = persister.data(forKey: remote.absoluteString) ?? data(fileUrl: local) {
+        if let data = persister.data(forKey: key(for: remote)) ?? data(fileUrl: local) {
             do {
                 try update(data)
             } catch {
@@ -109,6 +109,22 @@ open class RemoteSettings {
     private func data(fileUrl url: URL?) -> Data? {
         guard let url = url else { return nil }
         return try? Data(contentsOf: url)
+    }
+    
+    
+    /// This function is used to determine the key, for which 
+    /// downloaded data will be stored. Returning the same key for
+    /// different URLs means data will be overridden. Use this, if the
+    /// url changes from time to time and you want to replace the original
+    /// data for example if you have to add a get parameter like a cachebuster 
+    /// or timestamp.
+    ///
+    /// Per default the key will be unique for every url.
+    ///
+    /// - Parameter url: The URL from which the data originates.
+    /// - Returns: The key to reference the data.
+    open func key(for url: URL) -> String {
+        return url.absoluteString
     }
 }
 
