@@ -60,6 +60,15 @@ open class FileDataStorage: DataStorage {
         do {
             return try Data(contentsOf: fileUrl)
         }
+        catch let error as NSError {
+            if error.domain == NSCocoaErrorDomain && error.code == 260 {
+                // no such file
+                return nil
+            } else {
+                print("\(error)")
+                return nil
+            }
+        }
         catch {
             print("\(error)")
             return nil
