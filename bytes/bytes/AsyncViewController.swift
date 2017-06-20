@@ -32,7 +32,7 @@ import UIKit
 ///     present(asyncViewController, animated: true, completion: nil)
 ///
 /// - ToDo: We should add a method to show some kind of progress.
-public class AsyncViewController: UIViewController {
+open class AsyncViewController: UIViewController {
 
     public typealias CancelClosure = () -> Void
     public typealias LoadClosure = (_ async: AsyncViewController) -> (CancelClosure?)
@@ -84,13 +84,13 @@ public class AsyncViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    public override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loadingView)
         loadingView.constrainEdges(to: view)
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         start()
     }
@@ -146,7 +146,7 @@ public class AsyncViewController: UIViewController {
         fatalError("this object is not NSCoding compliant")
     }
     
-    override public func encode(with aCoder: NSCoder) {
+    override open func encode(with aCoder: NSCoder) {
         fatalError("this object is not NSCoding compliant")
     }
 }
