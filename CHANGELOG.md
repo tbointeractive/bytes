@@ -2,6 +2,7 @@
 
 ## unreleased
 * **feature** Added function to shuffle an Array/NSArray.
+* **feature** The AsyncViewController will now take over the rightBarButtonItems from its contentViewController 
 * **bugfix** Exposed UIColor hex convenience initializer
 * **bugfix** UIViewController addChildViewController extension will now call didMoveToParentViewController in the correct order
 
