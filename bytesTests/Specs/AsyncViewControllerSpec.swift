@@ -230,5 +230,29 @@ class AsyncViewControllerSpec: QuickSpec {
                 expect(isCancelled) == true
             }
         }
+        describe("contentViewController") {
+            it("should pass through the rightBarButtonItem property of the navigationItem") {
+                let async = AsyncViewController() { _ in return nil }
+                let contentViewController = UIViewController()
+                let barButtonItem = UIBarButtonItem()
+                async.start()
+                async.finish(content: contentViewController)
+                contentViewController.navigationItem.rightBarButtonItem = barButtonItem
+                expect(async.navigationItem.rightBarButtonItem) != nil
+                expect(async.navigationItem.rightBarButtonItem) === barButtonItem
+            }
+        }
+        describe("contentViewController") {
+            it("should pass through the rightBarButtonItems property of the navigationItem") {
+                let async = AsyncViewController() { _ in return nil }
+                let contentViewController = UIViewController()
+                let barButtonItems = [UIBarButtonItem()]
+                async.start()
+                async.finish(content: contentViewController)
+                contentViewController.navigationItem.rightBarButtonItems = barButtonItems
+                expect(async.navigationItem.rightBarButtonItems) != nil
+                expect(async.navigationItem.rightBarButtonItems) === barButtonItems
+            }
+        }
     }
 }

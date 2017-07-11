@@ -33,7 +33,7 @@ import UIKit
 ///
 /// - ToDo: We should add a method to show some kind of progress.
 open class AsyncViewController: UIViewController {
-
+    
     public typealias CancelClosure = () -> Void
     public typealias LoadClosure = (_ async: AsyncViewController) -> (CancelClosure?)
     
@@ -46,6 +46,19 @@ open class AsyncViewController: UIViewController {
     
     private var errorView: UIView?
     
+    private var contentViewController: UIViewController? = nil {
+        didSet {
+            if let contentViewController = oldValue {
+                contentViewController.navigationItem.removeObserver(self, forKeyPath: "rightBarButtonItems")
+                contentViewController.navigationItem.removeObserver(self, forKeyPath: "rightBarButtonItem")
+            }
+            if let contentViewController = contentViewController {
+                contentViewController.navigationItem.addObserver(self, forKeyPath: "rightBarButtonItems", options: [], context: nil)
+                contentViewController.navigationItem.addObserver(self, forKeyPath: "rightBarButtonItem", options: [], context: nil)
+            }
+        }
+    }
+    
     /// Returns an error view for a given error. The view will be added as a subview and
     /// constrained to the edges of the view of the AsyncViewController.
     /// - Remark: You can override this property in a subclass. When overriding
@@ -55,20 +68,24 @@ open class AsyncViewController: UIViewController {
     /// - Returns: Returns a View that should be displayed in the error state.
     open func errorView(_ error: Error?) -> UIView {
         let label = UILabel(frame: CGRect.zero)
-        label.text = "\(error)"
+        label.text = error?.localizedDescription ?? ""
         return label
     }
-
+    
     private var load: LoadClosure?
-
-    /// The cancelClosure is exectued when the AsyncViewController is deinitalized 
+    
+    /// The cancelClosure is exectued when the AsyncViewController is deinitalized
     /// or the cancel() function is called
     private var cancelClosure: CancelClosure?
-
+    
     deinit {
+        if let contentViewController = self.contentViewController {
+            contentViewController.navigationItem.removeObserver(self, forKeyPath: "rightBarButtonItems")
+            contentViewController.navigationItem.removeObserver(self, forKeyPath: "rightBarButtonItem")
+        }
         cancelClosure?()
     }
-
+    
     /// Initializes a new AsyncViewController.
     ///
     /// - Parameter load: The closure that should be executed to perform the asynchronous process.
@@ -123,6 +140,7 @@ open class AsyncViewController: UIViewController {
         loadingView.isHidden = true
         load = nil
         cancelClosure = nil
+        self.contentViewController = contentViewController
         addChildViewController(contentViewController, constrainEdgesTo: view)
     }
     
@@ -138,6 +156,16 @@ open class AsyncViewController: UIViewController {
         self.errorView = errorView
         view.addSubview(errorView)
         errorView.constrainEdges(to: view)
+    }
+    
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "rightBarButtonItems",
+            let navigationItem = object as? UINavigationItem {
+            self.navigationItem.rightBarButtonItems = navigationItem.rightBarButtonItems
+        } else if keyPath == "rightBarButtonItem",
+            let navigationItem = object as? UINavigationItem {
+            self.navigationItem.rightBarButtonItem = navigationItem.rightBarButtonItem
+        }
     }
     
     // MARK: NSCoding
