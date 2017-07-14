@@ -13,9 +13,16 @@ extension NSArray {
     /// It uses the Fisher-Yates algorithm.
     ///
     /// [source](https://gist.github.com/natecook1000/0ac03efe07f647b46dae)
-    func shuffled() -> NSArray {
+    public func shuffled() -> NSArray {
         let array = self as Array
         return array.shuffled() as NSArray
+    }
+    /// Returns a random element of this array
+    public var random: Element? {
+        get {
+            let array = self as Array
+            return array.random
+        }
     }
 }
 
@@ -24,7 +31,7 @@ extension MutableCollection where Self.IndexDistance == Int, Self.Index == Int {
     /// It uses the Fisher-Yates algorithm.
     ///
     /// [source](https://gist.github.com/natecook1000/0ac03efe07f647b46dae)
-    func shuffled() -> Self {
+    public func shuffled() -> Self {
         var copy = self
         let count = self.count
         for sourceIndex in 0..<(count - 1) {
@@ -34,5 +41,15 @@ extension MutableCollection where Self.IndexDistance == Int, Self.Index == Int {
             }
         }
         return copy
+    }
+}
+
+extension Collection where Self.IndexDistance == Int, Self.Index == Int {
+    /// Returns a random element of this collection
+    public var random: Iterator.Element? {
+        get {
+            let index = Int(arc4random_uniform(UInt32(count)))
+            return self[index]
+        }
     }
 }
