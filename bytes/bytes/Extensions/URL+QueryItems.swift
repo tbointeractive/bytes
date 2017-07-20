@@ -40,6 +40,15 @@ public extension URL {
         return components.queryItems ?? []
     }
     
+    /// Filters all queryItems and returns the first with the matching name
+    ///
+    /// - Parameter name: The name of the queryItems that is searched.
+    /// - Returns: The first queryItem that matches the name.
+    func queryItem(forName name: String) -> URLQueryItem? {
+        return queryItems().first(where: { $0.name == name })
+    }
+
+    
     /// Returns a new url where all URLQueryItem are replaced.
     ///
     /// - Parameter items: An Array of the new URLQueryItems.

@@ -75,5 +75,19 @@ class URLExtensionSpec: QuickSpec {
                 }
             }
         }
+        describe("queryItemForName") {
+            it("should return nil if no queryItem with the searched name exists") {
+                let url = URL(string: "http://tbointeractive.com?a=b&c=d")!
+                expect(url.queryItem(forName: "d")).to(beNil())
+            }
+            it("should return the queryItem if one with a matching name exists") {
+                let url = URL(string: "http://tbointeractive.com?a=b&c=d")!
+                expect(url.queryItem(forName: "a")?.value) == "b"
+            }
+            it("should return the first queryItem if mulitple items with the same name exist") {
+                let url = URL(string: "http://tbointeractive.com?a=b&a=d")!
+                expect(url.queryItem(forName: "a")?.value) == "b"
+            }
+        }
     }
 }
