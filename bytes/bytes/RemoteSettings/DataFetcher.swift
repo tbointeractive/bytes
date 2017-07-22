@@ -21,12 +21,6 @@ public protocol DataFetcher {
     ///   - url: The url to fetch.
     ///   - completion: The completion block to call whith the result.
     func fetch(_ url: URL, completion: @escaping Completion)
-    
-    /// Returns cached, existing data if any is cached and not expired.
-    ///
-    /// - Parameter url: The url for which the Cache should be returned.
-    /// - Returns: The chached Data.
-    func cached(_ url: URL) -> Data?
 }
 
 extension DataFetcher {
@@ -67,15 +61,5 @@ class URLSessionDataFetcher: DataFetcher {
             }
         }
         task.resume()
-    }
-    
-    /// Returns cached, existing data if any is cached and not expired.
-    ///
-    /// - Parameter url: The url for which the Cache should be returned.
-    /// - Returns: The chached Data.
-    func cached(_ url: URL) -> Data? {
-        guard let cache = session.configuration.urlCache else { return nil }
-        guard let response = cache.cachedResponse(for: URLRequest(url: url)) else { return nil }
-        return response.data
     }
 }
