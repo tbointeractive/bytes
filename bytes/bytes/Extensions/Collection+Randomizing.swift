@@ -48,6 +48,7 @@ extension Collection where Self.IndexDistance == Int, Self.Index == Int {
     /// Returns a random element of this collection
     public var random: Iterator.Element? {
         get {
+            guard count > 0 else { return nil }
             let index = Int(arc4random_uniform(UInt32(count)))
             return self[index]
         }

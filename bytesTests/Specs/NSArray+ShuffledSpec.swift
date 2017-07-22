@@ -37,6 +37,10 @@ class NSArrayShuffledSpec: QuickSpec {
                 let element = array.random
                 expect(array.contains(element!)) == true
             }
+            it("should return nil for an empty array") {
+                let array: [Int] = []
+                expect(array.random).to(beNil())
+            }
         }
     }
 }
