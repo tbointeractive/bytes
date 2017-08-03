@@ -19,7 +19,7 @@ extension Dictionary where Key: Equatable, Value: Equatable {
     ///
     /// - Parameter destination: The dictionary this diff should reach.
     /// - Returns: The diff comparing the source to the destination.
-    func diff(to destination: [Key:Value]) -> [Key:Value?] {
+    public func diff(to destination: [Key:Value]) -> [Key:Value?] {
         var diff: [Key:Value?] = [:]
         for (sourceKey, sourceValue) in self {
             if sourceValue != destination[sourceKey] {
