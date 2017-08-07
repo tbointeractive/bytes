@@ -85,13 +85,15 @@ open class RemoteSettings {
     ///   - url: The URL where to fetch the data from.
     ///   - finished: The completion block to be called when download is finished.
     private func update(_ url: URL, finished: Completion?) {
-        fetcher.fetch(url) { data, fetchingError in
+        fetcher.fetch(url) { [weak self] data, fetchingError in
+            guard let strongSelf = self else { return }
             if let data = data {
                 do {
-                    if !self.persister.store(data: data, forKey: url.absoluteString) {
+                    try strongSelf.update(data)
+                    let dataToPersist = strongSelf.data() ?? data
+                    if !strongSelf.persister.store(data: dataToPersist, forKey: url.absoluteString) {
                         print("The DataPersister was unable to store data.")
                     }
-                    try self.update(data)
                     finished?(nil)
                 } catch {
                     finished?(error)
@@ -125,6 +127,22 @@ open class RemoteSettings {
     /// - Returns: The key to reference the data.
     open func key(for url: URL) -> String {
         return url.absoluteString
+    }
+    
+    /// After updating the Data from the remote url the persister
+    /// is used to store the updated data. The data stored in the 
+    /// persisiter is then used to update the RemoteSettings object
+    /// upon next instantiation. This method can be used to configure
+    /// what data to persist. Per default it will return nil, so the
+    /// data from the URL response will be used.
+    /// 
+    /// This method can be helpful for example, if the data is updated
+    /// iteratively, so the URL response will only contain a diff.
+    /// In this case you can return the full data here.
+    ///
+    /// - Returns: The Data that will be persisted and used to update upon instantiation.
+    open func data() -> Data? {
+        return nil
     }
 }
 
