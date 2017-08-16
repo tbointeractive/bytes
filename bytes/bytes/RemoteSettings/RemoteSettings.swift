@@ -41,14 +41,28 @@ open class RemoteSettings {
         self.local = local
         self.fetcher = fetcher
         self.persister = persister
-        if let data = persister.data(forKey: key(for: remote)) ?? data(fileUrl: local) {
+        
+        var isDataLoaded = false
+        if let cachedData = persister.data(forKey: key(for: remote)) {
             do {
-                try update(data)
+                try update(cachedData)
+                isDataLoaded = true
             } catch {
-                print("Unable to initialize from local or cached data with error \(error)")
+                print("Unable to initialize from cached data with error \(error)")
             }
-        } else {
-            print("No local or cached data found")
+        }
+        
+        if !isDataLoaded {
+            if let localdata = data(fileUrl: local) {
+                do {
+                    try update(localdata)
+                    isDataLoaded = true
+                } catch {
+                    print("Unable to initialize from local data with error \(error)")
+                }
+            } else {
+                print("No local or cached data found")
+            }
         }
     }
     
