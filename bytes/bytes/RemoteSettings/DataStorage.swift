@@ -76,9 +76,9 @@ open class FileDataStorage: DataStorage {
     }
 }
 
-final class DocumentsFolderDataStorage: FileDataStorage {
+public final class DocumentsFolderDataStorage: FileDataStorage {
     
-    convenience init(subfolder: String) {
+    public convenience init(subfolder: String) {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let baseUrl = URL(fileURLWithPath: documentsPath, isDirectory: true).appendingPathComponent(subfolder)
         self.init(baseUrl: baseUrl)
