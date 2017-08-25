@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "bytes"
-  s.version      = "0.2"
+  s.version      = "0.9"
   s.summary      = "Have some bytes"
 
   s.description  = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.2"
 
-  s.source       = { :git => "git@git.tbointeractive.com:chorstmann/bytes.git", :tag => '0.2'}
+  s.source       = { :git => "git@git.tbointeractive.com:chorstmann/bytes.git", :tag => '0.9'}
 
   s.source_files = "bytes/bytes/**/*.swift"
 

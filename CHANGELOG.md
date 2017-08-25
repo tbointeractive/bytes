@@ -6,8 +6,8 @@
 * **feature** Added function to get a queryItem from a url where the name matches a string.
 * **feature** Added random property to every Collection and NSArray.
 * **feature** Added function to shuffle an Array/NSArray.
-* **improvement** The constraint helper now return a discardableResult that is the constriaint that has been set.
-* **improvement** The AsyncViewController will now take over the rightBarButtonItems from its contentViewController 
+* **improvement** The constraint helper now returns a discardableResult that is the constriaint that has been set.
+* **improvement** The AsyncViewController will now take over the rightBarButtonItems from its contentViewController
 * **improvement** The AsyncViewController will now cancel the current loading if it is deallocated.
 * **improvement** Added support for iOS 8.2
 * **bugfix** Exposed UIColor hex convenience initializer
