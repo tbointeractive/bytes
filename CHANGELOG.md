@@ -1,8 +1,15 @@
 # Changelog
 
-## unreleased
+## 0.9
+* **feature** Added a function to render a UIView into a UIImage.
+* **feature** Added a function do calculate the difference between two dictionaries.
+* **feature** Added function to get a queryItem from a url where the name matches a string.
+* **feature** Added random property to every Collection and NSArray.
 * **feature** Added function to shuffle an Array/NSArray.
-* **feature** The AsyncViewController will now take over the rightBarButtonItems from its contentViewController 
+* **improvement** The constraint helper now return a discardableResult that is the constriaint that has been set.
+* **improvement** The AsyncViewController will now take over the rightBarButtonItems from its contentViewController 
+* **improvement** The AsyncViewController will now cancel the current loading if it is deallocated.
+* **improvement** Added support for iOS 8.2
 * **bugfix** Exposed UIColor hex convenience initializer
 * **bugfix** UIViewController addChildViewController extension will now call didMoveToParentViewController in the correct order
 
