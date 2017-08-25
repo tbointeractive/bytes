@@ -4,6 +4,7 @@ stages:
   - release
 
 before_script:
+  - bundle install
   - pod install || pod install --repo-update
 
 test_ios10.1:
