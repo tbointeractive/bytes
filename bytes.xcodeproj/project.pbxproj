@@ -46,6 +46,9 @@
 		1F81BC1E1DC9F40D004F3433 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */; };
 		1F8C5DA31DF5A38100403AA9 /* URL+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C5DA21DF5A38000403AA9 /* URL+QueryItems.swift */; };
 		1F8C5DA51DF5A3A000403AA9 /* URL+QueryItemsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C5DA41DF5A3A000403AA9 /* URL+QueryItemsSpec.swift */; };
+		1FEBA7231F50310500B1D67A /* UIView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBA7221F50310500B1D67A /* UIView+Rendering.swift */; };
+		1FEBA7261F50310F00B1D67A /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBA7251F50310F00B1D67A /* Fixture.swift */; };
+		1FEBA7281F50311500B1D67A /* UIView+RenderingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEBA7271F50311500B1D67A /* UIView+RenderingSpecs.swift */; };
 		1FF0F0E01DBF4F61002BE0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */; };
 		1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */; };
 		1FF0F0E51DBF4F61002BE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0F0E31DBF4F61002BE0C9 /* Main.storyboard */; };
@@ -109,6 +112,9 @@
 		1F81BC1D1DC9F40D004F3433 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		1F8C5DA21DF5A38000403AA9 /* URL+QueryItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+QueryItems.swift"; sourceTree = "<group>"; };
 		1F8C5DA41DF5A3A000403AA9 /* URL+QueryItemsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+QueryItemsSpec.swift"; sourceTree = "<group>"; };
+		1FEBA7221F50310500B1D67A /* UIView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rendering.swift"; sourceTree = "<group>"; };
+		1FEBA7251F50310F00B1D67A /* Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
+		1FEBA7271F50311500B1D67A /* UIView+RenderingSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RenderingSpecs.swift"; sourceTree = "<group>"; };
 		1FF0F0DC1DBF4F61002BE0C9 /* bytes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bytes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF0F0DF1DBF4F61002BE0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FF0F0E11DBF4F61002BE0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 		1F05843D1DF6006A0007E0DA /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				1FEBA7271F50311500B1D67A /* UIView+RenderingSpecs.swift */,
 				7510AF6F1DC8D1AF000E3314 /* ApplicationSpec.swift */,
 				1F5A94AE1DF8ABC8002930CA /* AsyncViewControllerSpec.swift */,
 				1F5DDCE41DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift */,
@@ -201,6 +208,14 @@
 				1F6142921F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift */,
 			);
 			path = Specs;
+			sourceTree = "<group>";
+		};
+		1FEBA7241F50310F00B1D67A /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				1FEBA7251F50310F00B1D67A /* Fixture.swift */,
+			);
+			path = Fixture;
 			sourceTree = "<group>";
 		};
 		1FF0F0D31DBF4F61002BE0C9 = {
@@ -241,6 +256,7 @@
 		1FF0F0F31DBF4F61002BE0C9 /* bytesTests */ = {
 			isa = PBXGroup;
 			children = (
+				1FEBA7241F50310F00B1D67A /* Fixture */,
 				1F05843D1DF6006A0007E0DA /* Specs */,
 				1FF0F0F61DBF4F61002BE0C9 /* Info.plist */,
 				9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */,
@@ -274,6 +290,7 @@
 		75033E3B1DC1F3B9003BDAB2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1FEBA7221F50310500B1D67A /* UIView+Rendering.swift */,
 				75D456461E0D5F2C00916BD8 /* Bool+Random.swift */,
 				1F0584291DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift */,
 				1F05842A1DF5FF9E0007E0DA /* DateComponentsFormatter+Preconfigured.swift */,
@@ -531,6 +548,7 @@
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
 				1F05843C1DF5FFED0007E0DA /* UIColor+Components.swift in Sources */,
 				1F05842E1DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift in Sources */,
+				1FEBA7231F50310500B1D67A /* UIView+Rendering.swift in Sources */,
 				1F81BC1A1DC9EEEE004F3433 /* IconFont.swift in Sources */,
 				1F3CA5821E07147C00121FDC /* SemanticVersion.swift in Sources */,
 				8C89DCFD1E68512D007FBAAA /* String+Hashes.swift in Sources */,
@@ -573,6 +591,8 @@
 				1F3B9E9D1DCB818700727379 /* ApplicationSpec.swift in Sources */,
 				1F27C8031EC6F01F006435D3 /* NSArray+ShuffledSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColor+ComponentsSpec.swift in Sources */,
+				1FEBA7261F50310F00B1D67A /* Fixture.swift in Sources */,
+				1FEBA7281F50311500B1D67A /* UIView+RenderingSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
