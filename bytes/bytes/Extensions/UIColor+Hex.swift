@@ -11,6 +11,7 @@ import UIKit
 extension UIColor {
     
     /// Initializes and returns a color object using a hexadecimal String.
+    ///
     /// - note: Formats supported: "RRGGBBAA", "RRGGBB" and "RGBA", "RGB" with optional leading hashtag.
     ///
     /// - Parameter hexString: A hexadecimal String repesenting the color value.

@@ -44,7 +44,8 @@ extension DateFormatter {
     
     /// A date formatter for localized abbreviated weekday representation i.e. "Mo" or "Tue"
     /// with current locale
-    /// - note: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
+    ///
+    /// - warning: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
     static public let weekdayShort: DateFormatter = {
         return DateFormatter.weekdayShort(forLocale: Locale.current)
     }()
@@ -83,7 +84,8 @@ extension DateFormatter {
     }
     
     /// A date formatter for localized abbreviated weekday representation i.e. "Mo" or "Tue"
-    /// - note: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
+    ///
+    /// - warning: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
