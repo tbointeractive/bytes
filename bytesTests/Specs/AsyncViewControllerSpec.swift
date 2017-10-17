@@ -16,7 +16,7 @@ class AsyncViewControllerSpec: QuickSpec {
         describe("init") {
             it("should initialize the object with a load closure") {
                 let async = AsyncViewController() { _ in return nil }
-                expect(async) != nil
+                expect(async).notTo(beNil())
             }
             it("should set the state to idle") {
                 let async = AsyncViewController() { _ in return nil }
@@ -24,7 +24,7 @@ class AsyncViewControllerSpec: QuickSpec {
             }
             it("should have a view") {
                 let async = AsyncViewController() { _ in return nil }
-                expect(async.view) != nil
+                expect(async.view).notTo(beNil())
             }
             it("should only have a hidden loadingView as a subview") {
                 let async = AsyncViewController() { _ in return nil }
@@ -238,7 +238,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 async.start()
                 async.finish(content: contentViewController)
                 contentViewController.navigationItem.rightBarButtonItem = barButtonItem
-                expect(async.navigationItem.rightBarButtonItem) != nil
+                expect(async.navigationItem.rightBarButtonItem).notTo(beNil())
                 expect(async.navigationItem.rightBarButtonItem) === barButtonItem
             }
         }
@@ -250,7 +250,7 @@ class AsyncViewControllerSpec: QuickSpec {
                 async.start()
                 async.finish(content: contentViewController)
                 contentViewController.navigationItem.rightBarButtonItems = barButtonItems
-                expect(async.navigationItem.rightBarButtonItems) != nil
+                expect(async.navigationItem.rightBarButtonItems).notTo(beNil())
                 expect(async.navigationItem.rightBarButtonItems) === barButtonItems
             }
         }

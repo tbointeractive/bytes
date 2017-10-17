@@ -7,11 +7,40 @@ before_script:
   - bundle install
   - pod install || pod install --repo-update
 
-test_ios10.1:
+code_coverage:
+  stage: test
+  script:
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.3.1' -enableCodeCoverage YES | xcpretty -s
+    - slather coverage --scheme bytes --workspace bytes.xcworkspace bytes.xcodeproj
+  tags:
+    - macos
+    - xcode
+    - ios10.0
+    - slather
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+test_ios11.0:
   stage: test
   script:
     - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
-    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' | xcpretty -s
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=11.0' | xcpretty -s
+  tags:
+    - macos
+    - xcode
+    - ios10.2
+    - cocoapods
+  cache:
+    paths:
+      - Pods
+
+test_ios10.3.1:
+  stage: test
+  script:
+    - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.3.1' | xcpretty -s
   tags:
     - macos
     - xcode
@@ -35,30 +64,15 @@ test_ios9.3:
     paths:
       - Pods
 
-test_ios8.2:
+test_ios8.4:
   stage: test
   script:
     - xcodebuild clean -workspace bytes.xcworkspace -scheme bytes | xcpretty
-    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.2' | xcpretty -s
+    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.4' | xcpretty -s
   tags:
     - macos
     - xcode
     - ios8.2
-    - cocoapods
-  cache:
-    paths:
-      - Pods
-
-code_coverage:
-  stage: test
-  script:
-    - xcodebuild test -workspace bytes.xcworkspace -scheme bytes -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' -enableCodeCoverage YES | xcpretty -s
-    - slather coverage --scheme bytes bytes.xcodeproj
-  tags:
-    - macos
-    - xcode
-    - ios10.0
-    - slather
     - cocoapods
   cache:
     paths:
