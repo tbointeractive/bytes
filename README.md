@@ -7,13 +7,7 @@
 
 ## Get started
 ### Install via [CocoaPods](http://cocoapods.org/)
-
-Add the TBO podspec repository as a source in your Podfile
-```ruby
-source 'git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git'
-```
-
-And add the bytes Pod
+Add the bytes Pod
 ```ruby
 pod 'bytes'
 ```

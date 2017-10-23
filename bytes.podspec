@@ -9,14 +9,14 @@
 Pod::Spec.new do |s|
 
   s.name         = "bytes"
-  s.version      = "0.9"
-  s.summary      = "Have some bytes"
+  s.version      = "1.0"
+  s.summary      = "bytes is a set of tools to cover many all-day tasks in iOS development."
 
   s.description  = <<-DESC
                     bytes is a set of tools to cover many all-day tasks in iOS development.
                    DESC
 
-  s.homepage     = "http://git.tbointeractive.com/chorstmann/bytes"
+  s.homepage     = "https://github.com/tbointeractive/bytes"
 
   s.license      = "MIT"
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.2"
 
-  s.source       = { :git => "git@git.tbointeractive.com:chorstmann/bytes.git", :tag => '0.9'}
+  s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => 'v1.0'}
 
   s.source_files = "bytes/bytes/**/*.swift"
 

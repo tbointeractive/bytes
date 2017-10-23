@@ -1,6 +1,9 @@
 # Changelog
 
 ## 0.9
+* **feature** Release of v1.0
+
+## 0.9
 * **feature** Added a function to render a UIView into a UIImage.
 * **feature** Added a function do calculate the difference between two dictionaries.
 * **feature** Added function to get a queryItem from a url where the name matches a string.
