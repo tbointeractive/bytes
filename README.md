@@ -12,6 +12,9 @@ Add the bytes Pod
 pod 'bytes'
 ```
 
+**The CommonCrypto Dilema:**  
+To provide little hashing helpers such as `public var md5: String` in [String+Hashes.swift](https://github.com/tbointeractive/bytes/blob/develop/bytes/bytes/Extensions/String%2BHashes.swift), bytes uses the static C Library CommonCrypto. During the pod install we include CommonCrypto by modulemaps (CocoaPods/) in the framework. Those modulemaps have strong references to the default installation path of Xcode (*/Applications/Xcode.app*).
+
 ## Usage
 Please read the documentation to find out about all the existing bytes.
 
