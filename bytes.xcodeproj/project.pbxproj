@@ -63,6 +63,8 @@
 		75DBFFF21E098B94000F43C1 /* Dictionary+MergeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DBFFF11E098B94000F43C1 /* Dictionary+MergeSpecs.swift */; };
 		8C89DCFD1E68512D007FBAAA /* String+Hashes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C89DCFC1E68512D007FBAAA /* String+Hashes.swift */; };
 		8C95D7E71E67361A00B76612 /* String+HashesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95D7E61E67361A00B76612 /* String+HashesSpec.swift */; };
+		8C9A69061FCD966200A30CFB /* TimeInterval+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A69051FCD966200A30CFB /* TimeInterval+Initializers.swift */; };
+		8C9A69081FCD96FF00A30CFB /* TimeInterval+InitializersSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9A69071FCD96FF00A30CFB /* TimeInterval+InitializersSpecs.swift */; };
 		9E858CE81DC8E7B8008BA84C /* UIColor+HexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */; };
 		9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */; };
 		BC2A29C285BD969EF2DE3FF9 /* Pods_bytes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE915E8665E4B0FA96257175 /* Pods_bytes.framework */; };
@@ -140,6 +142,8 @@
 		75DBFFF11E098B94000F43C1 /* Dictionary+MergeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MergeSpecs.swift"; sourceTree = "<group>"; };
 		8C89DCFC1E68512D007FBAAA /* String+Hashes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hashes.swift"; sourceTree = "<group>"; };
 		8C95D7E61E67361A00B76612 /* String+HashesSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HashesSpec.swift"; sourceTree = "<group>"; };
+		8C9A69051FCD966200A30CFB /* TimeInterval+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Initializers.swift"; sourceTree = "<group>"; };
+		8C9A69071FCD96FF00A30CFB /* TimeInterval+InitializersSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+InitializersSpecs.swift"; sourceTree = "<group>"; };
 		9E858CE71DC8E7B8008BA84C /* UIColor+HexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexSpec.swift"; sourceTree = "<group>"; };
 		9EA85DBF1DC38700001EA93D /* UIImage+TransformationsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TransformationsSpec.swift"; sourceTree = "<group>"; };
 		9EA85DC61DC39A6B001EA93D /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				1F27C8021EC6F01F006435D3 /* NSArray+ShuffledSpec.swift */,
 				1F325AA11F3224E500B959A4 /* Dictionary+DiffSpec.swift */,
 				1F6142921F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift */,
+				8C9A69071FCD96FF00A30CFB /* TimeInterval+InitializersSpecs.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				1F27C8001EC6EF9C006435D3 /* Collection+Randomizing.swift */,
 				1F325A9F1F3224C900B959A4 /* Dictionary+Diff.swift */,
 				1F6142901F50019100F17C51 /* Collection+JoinNSAttributedString.swift */,
+				8C9A69051FCD966200A30CFB /* TimeInterval+Initializers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -546,6 +552,7 @@
 				75DBFFF01E098A46000F43C1 /* Dictionary+Merge.swift in Sources */,
 				1F381E0B1E1C073D008CA922 /* Application.swift in Sources */,
 				1FF0F0E21DBF4F61002BE0C9 /* ViewController.swift in Sources */,
+				8C9A69061FCD966200A30CFB /* TimeInterval+Initializers.swift in Sources */,
 				1F05843C1DF5FFED0007E0DA /* UIColor+Components.swift in Sources */,
 				1F05842E1DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift in Sources */,
 				1FEBA7231F50310500B1D67A /* UIView+Rendering.swift in Sources */,
@@ -583,6 +590,7 @@
 				1F325AA21F3224E500B959A4 /* Dictionary+DiffSpec.swift in Sources */,
 				1F3B9EA31DCB81F100727379 /* DateFormatter+PreconfiguredSpec.swift in Sources */,
 				1F5DDCE51DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift in Sources */,
+				8C9A69081FCD96FF00A30CFB /* TimeInterval+InitializersSpecs.swift in Sources */,
 				1F81BC1C1DC9F3FF004F3433 /* IconFontSpec.swift in Sources */,
 				1F8C5DA51DF5A3A000403AA9 /* URL+QueryItemsSpec.swift in Sources */,
 				75D4564D1E0D69BA00916BD8 /* String+RandomSpec.swift in Sources */,
