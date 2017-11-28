@@ -64,6 +64,12 @@ public struct Device {
             case "iPhone9,2":    return "iPhone 7 Plus (GSM+CDMA)"
             case "iPhone9,3":    return "iPhone 7 (Global)"
             case "iPhone9,4":    return "iPhone 7 Plus (Global)"
+            case "iPhone10,1":    return "iPhone 8 (GSM+CDMA)"
+            case "iPhone10,2":    return "iPhone 8 Plus (GSM+CDMA)"
+            case "iPhone10,3":    return "iPhone X (GSM+CDMA)"
+            case "iPhone10,4":    return "iPhone 8 (Global)"
+            case "iPhone10,5":    return "iPhone 8 Plus (Global)"
+            case "iPhone10,6":    return "iPhone X (Global)"
                 
             // iPod
             case "iPod1,1":      return "iPod Touch 1G"
@@ -105,6 +111,10 @@ public struct Device {
             case "iPad6,4":      return "iPad Pro 9.7 (Cellular)"
             case "iPad6,7":      return "iPad Pro 12.9 (WiFi)"
             case "iPad6,8":      return "iPad Pro 12.9 (Cellular)"
+            case "iPad7,1":      return "iPad Pro 12.9 2nd generation (WiFi)"
+            case "iPad7,2":      return "iPad Pro 12.9 2nd generation (Cellular)"
+            case "iPad7,3":      return "iPad Pro 10.5 (WiFi)"
+            case "iPad7,4":      return "iPad Pro 10.5 (Cellular)"
                 
             case "i386":         return "Simulator"
             case "x86_64":       return "Simulator"
