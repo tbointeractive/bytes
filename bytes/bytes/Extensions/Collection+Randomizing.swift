@@ -37,7 +37,7 @@ extension MutableCollection where Self.IndexDistance == Int, Self.Index == Int {
         for sourceIndex in 0..<(count - 1) {
             let destinationIndex = Int(arc4random_uniform(UInt32(count - sourceIndex))) + sourceIndex
             if sourceIndex != destinationIndex {
-                swap(&copy[sourceIndex], &copy[destinationIndex])
+                copy.swapAt(sourceIndex, destinationIndex)
             }
         }
         return copy

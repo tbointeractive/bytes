@@ -45,11 +45,11 @@ class CollectionJoinNSAttributedStringsSpec: QuickSpec {
                 expect(strings.joined(separator: NSAttributedString(string: "-"))) == NSAttributedString(string: "")
             }
             it("should copy over the attributes") {
-                let first = NSAttributedString(string: "foo", attributes:[NSForegroundColorAttributeName: UIColor.red])
-                let second = NSAttributedString(string: "bar", attributes:[NSForegroundColorAttributeName: UIColor.green])
+                let first = NSAttributedString(string: "foo", attributes:[NSAttributedStringKey.foregroundColor: UIColor.red])
+                let second = NSAttributedString(string: "bar", attributes:[NSAttributedStringKey.foregroundColor: UIColor.green])
                 let expected = NSMutableAttributedString(string: "foobar")
-                expected.setAttributes([NSForegroundColorAttributeName: UIColor.red], range: NSRange(location: 0, length: 3))
-                expected.setAttributes([NSForegroundColorAttributeName: UIColor.green], range: NSRange(location: 3, length: 3))
+                expected.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.red], range: NSRange(location: 0, length: 3))
+                expected.setAttributes([NSAttributedStringKey.foregroundColor: UIColor.green], range: NSRange(location: 3, length: 3))
                 expect([first, second].joined()) == expected
             }
         }

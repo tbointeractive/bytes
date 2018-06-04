@@ -34,7 +34,7 @@ public class IconFont: NSObject {
     /// - Returns: The string with the icon.
     public func iconString(identifier: String, size: CGFloat) -> NSAttributedString? {
         let sizedFont = font.withSize(size)
-        return NSAttributedString(string: identifier, attributes: [NSFontAttributeName:sizedFont, NSForegroundColorAttributeName: UIColor.black])
+        return NSAttributedString(string: identifier, attributes: [NSAttributedStringKey.font:sizedFont, NSAttributedStringKey.foregroundColor: UIColor.black])
     }
     
     /// Creates a UIImage with rendering mode `.alwaysTemplate` of the icon in a certain size
