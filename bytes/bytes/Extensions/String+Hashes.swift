@@ -33,7 +33,7 @@ extension String {
             hash.appendFormat("%02x", result[i])
         }
         
-        result.deallocate(capacity: digestLen)
+        result.deallocate()
         
         return String(format: hash as String)
     }
@@ -42,7 +42,7 @@ extension String {
     /// The md5 String of 'tbointeractive' is 'ce4e63a8973664258a13b5bcba270bc9'.
     ///
     /// - Returns: md5 hash as an instance of String
-    public var md5: String! {
+    public var md5: String {
         return CCHashFunction(function: CC_MD5, digestLength: CC_MD5_DIGEST_LENGTH)
     }
 

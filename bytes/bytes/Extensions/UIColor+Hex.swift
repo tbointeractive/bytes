@@ -20,7 +20,7 @@ extension UIColor {
     public convenience init?(hexString: String) {
         var hexInt: UInt32 = 0
         let scanner = Scanner(string: hexString)
-        var stringLength = hexString.characters.count
+        var stringLength = hexString.count
         if hexString.hasPrefix("#") {
             scanner.scanLocation = 1
             stringLength -= 1
@@ -31,7 +31,7 @@ extension UIColor {
         let colorLevels: UInt32 = UInt32(pow(Double(2),Double(bitsPerColor))) - 1 // so 15 or 255
         
         guard scanner.scanHexInt32(&hexInt) else { return nil }
-        guard scanner.scanLocation == hexString.characters.count else { return nil } // can happen for strings such as #00x000 because x is not a hex value
+        guard scanner.scanLocation == hexString.count else { return nil } // can happen for strings such as #00x000 because x is not a hex value
         
         var red: UInt32 = 0
         var green: UInt32 = 0

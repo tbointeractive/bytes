@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Collection where Iterator.Element == NSAttributedString, IndexDistance == Int {
+extension Collection where Iterator.Element == NSAttributedString {
     /// Returns a new NSAttributedString by concatenating the elements of the collection,
     /// adding the given separator between each element.
     ///
