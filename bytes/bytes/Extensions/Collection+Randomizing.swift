@@ -26,7 +26,7 @@ extension NSArray {
     }
 }
 
-extension MutableCollection where Self.IndexDistance == Int, Self.Index == Int {
+extension MutableCollection where Self.Index == Int {
     /// Returns a new array with all the value shuffled.
     /// It uses the Fisher-Yates algorithm.
     ///
@@ -44,7 +44,7 @@ extension MutableCollection where Self.IndexDistance == Int, Self.Index == Int {
     }
 }
 
-extension Collection where Self.IndexDistance == Int, Self.Index == Int {
+extension Collection where Self.Index == Int {
     /// Returns a random element of this collection
     public var random: Iterator.Element? {
         get {
