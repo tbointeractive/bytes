@@ -111,6 +111,8 @@ public struct Device {
             case "iPad6,4":      return "iPad Pro 9.7 (Cellular)"
             case "iPad6,7":      return "iPad Pro 12.9 (WiFi)"
             case "iPad6,8":      return "iPad Pro 12.9 (Cellular)"
+            case "iPad6,11":     return "iPad (2017)"
+            case "iPad6,12":     return "iPad (2017)"
             case "iPad7,1":      return "iPad Pro 12.9 2nd generation (WiFi)"
             case "iPad7,2":      return "iPad Pro 12.9 2nd generation (Cellular)"
             case "iPad7,3":      return "iPad Pro 10.5 (WiFi)"
