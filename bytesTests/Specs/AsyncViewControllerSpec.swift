@@ -49,6 +49,12 @@ class AsyncViewControllerSpec: QuickSpec {
                 expect(weakAsync).to(beNil())
             }
         }
+        describe("view") {
+            it("should have a white background color per default") {
+                let async = AsyncViewController() { _ in return nil}
+                expect(async.view.backgroundColor) == UIColor.white
+            }
+        }
         describe("viewWillAppear") {
             it("should call the load closure") {
                 var calledLoad = false

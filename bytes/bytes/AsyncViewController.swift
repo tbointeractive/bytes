@@ -104,6 +104,7 @@ open class AsyncViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(loadingView)
+        view.backgroundColor = .white
         loadingView.constrainEdges(to: view)
     }
     
