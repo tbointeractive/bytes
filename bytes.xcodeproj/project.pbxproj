@@ -24,6 +24,8 @@
 		1F27C8031EC6F01F006435D3 /* NSArray+ShuffledSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27C8021EC6F01F006435D3 /* NSArray+ShuffledSpec.swift */; };
 		1F325AA01F3224C900B959A4 /* Dictionary+Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325A9F1F3224C900B959A4 /* Dictionary+Diff.swift */; };
 		1F325AA21F3224E500B959A4 /* Dictionary+DiffSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F325AA11F3224E500B959A4 /* Dictionary+DiffSpec.swift */; };
+		1F334E8020C8305A00F2EB95 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F334E7F20C8305A00F2EB95 /* UIImage+Color.swift */; };
+		1F334E8220C831CD00F2EB95 /* UIImage+ColorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F334E8120C831CD00F2EB95 /* UIImage+ColorSpec.swift */; };
 		1F381E0B1E1C073D008CA922 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F381E0A1E1C073D008CA922 /* Application.swift */; };
 		1F3B9E9C1DCB818700727379 /* UIView+ConstraintsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB7BED1DC240E70078A853 /* UIView+ConstraintsSpec.swift */; };
 		1F3B9E9D1DCB818700727379 /* ApplicationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510AF6F1DC8D1AF000E3314 /* ApplicationSpec.swift */; };
@@ -97,6 +99,8 @@
 		1F27C8021EC6F01F006435D3 /* NSArray+ShuffledSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+ShuffledSpec.swift"; sourceTree = "<group>"; };
 		1F325A9F1F3224C900B959A4 /* Dictionary+Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Diff.swift"; sourceTree = "<group>"; };
 		1F325AA11F3224E500B959A4 /* Dictionary+DiffSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+DiffSpec.swift"; sourceTree = "<group>"; };
+		1F334E7F20C8305A00F2EB95 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		1F334E8120C831CD00F2EB95 /* UIImage+ColorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ColorSpec.swift"; sourceTree = "<group>"; };
 		1F381E0A1E1C073D008CA922 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		1F3CA5811E07147C00121FDC /* SemanticVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticVersion.swift; sourceTree = "<group>"; };
 		1F3CA5831E07148C00121FDC /* SemanticVersionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticVersionSpec.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				1F27C8021EC6F01F006435D3 /* NSArray+ShuffledSpec.swift */,
 				1F325AA11F3224E500B959A4 /* Dictionary+DiffSpec.swift */,
 				1F6142921F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift */,
+				1F334E8120C831CD00F2EB95 /* UIImage+ColorSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				1F27C8001EC6EF9C006435D3 /* Collection+Randomizing.swift */,
 				1F325A9F1F3224C900B959A4 /* Dictionary+Diff.swift */,
 				1F6142901F50019100F17C51 /* Collection+JoinNSAttributedString.swift */,
+				1F334E7F20C8305A00F2EB95 /* UIImage+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				1F5A94AD1DF8AB94002930CA /* AsyncViewController.swift in Sources */,
 				1F325AA01F3224C900B959A4 /* Dictionary+Diff.swift in Sources */,
 				1F6142911F50019100F17C51 /* Collection+JoinNSAttributedString.swift in Sources */,
+				1F334E8020C8305A00F2EB95 /* UIImage+Color.swift in Sources */,
 				75D456471E0D5F2C00916BD8 /* Bool+Random.swift in Sources */,
 				75D456431E0D521400916BD8 /* Int+Random.swift in Sources */,
 				1F8C5DA31DF5A38100403AA9 /* URL+QueryItems.swift in Sources */,
@@ -540,6 +547,7 @@
 				75D4564D1E0D69BA00916BD8 /* String+RandomSpec.swift in Sources */,
 				1F6142931F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift in Sources */,
 				1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */,
+				1F334E8220C831CD00F2EB95 /* UIImage+ColorSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* ApplicationSpec.swift in Sources */,
 				1F27C8031EC6F01F006435D3 /* NSArray+ShuffledSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColor+ComponentsSpec.swift in Sources */,
