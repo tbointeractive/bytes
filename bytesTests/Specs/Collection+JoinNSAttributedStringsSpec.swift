@@ -6,9 +6,7 @@
 //  Copyright © 2017 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
-import Foundation
-
-@testable import bytes
+import bytes
 
 import Quick
 import Nimble

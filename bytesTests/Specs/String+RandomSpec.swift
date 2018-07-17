@@ -7,7 +7,7 @@
 //
 
 
-@testable import bytes
+import bytes
 
 import Quick
 import Nimble
