@@ -9,9 +9,9 @@ target 'bytes' do
 
   target 'bytesTests' do
     inherit! :search_paths
-    pod 'Quick', '~> 1.1'
-    pod 'Nimble', '~> 7.0.2'
-    pod 'Nimble-Snapshots', '~> 6.3'
+    pod 'Quick', '~> 1.3'
+    pod 'Nimble', '~> 7.1'
+    pod 'Nimble-Snapshots', '~> 6.7'
   end
 
 end
