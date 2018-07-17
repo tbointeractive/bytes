@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     /// An NSCache used to cache images generates by the `UIImage.from(color)` function.
     /// Per default this is non nil and has a `countLimit` of 10.
     /// Set this to nil to deactivate caching at all. Set the `countLimit` of this
     /// chache to 0 if you want to define no caching limit.
-    static var imageFromColorCache: NSCache<UIColor, UIImage>? = {
+    public static var imageFromColorCache: NSCache<UIColor, UIImage>? = {
         let cache = NSCache<UIColor, UIImage>()
         cache.countLimit = 10;
         return cache;
@@ -26,7 +26,7 @@ extension UIImage {
     ///
     /// - Parameter color: The color of the image.
     /// - Returns: A 1x1 pixes image filled with that color.
-    static func from(_ color: UIColor) -> UIImage {
+    public static func from(_ color: UIColor) -> UIImage {
         if let image = imageFromColorCache?.object(forKey: color) {
             return image;
         }
