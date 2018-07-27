@@ -19,6 +19,7 @@
 		1F05843A1DF5FFB60007E0DA /* UIImage+Transformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0584391DF5FFB60007E0DA /* UIImage+Transformations.swift */; };
 		1F05843C1DF5FFED0007E0DA /* UIColor+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05843B1DF5FFED0007E0DA /* UIColor+Components.swift */; };
 		1F092BF41E1D0F2C00394B30 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F092BF31E1D0F2C00394B30 /* Device.swift */; };
+		1F10013A210B21BF00A56A49 /* NSRegularExpression+MatchesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F100139210B21BF00A56A49 /* NSRegularExpression+MatchesSpec.swift */; };
 		1F27173F1DC8CB5C00DD4318 /* DiscardTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */; };
 		1F27C8011EC6EF9C006435D3 /* Collection+Randomizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27C8001EC6EF9C006435D3 /* Collection+Randomizing.swift */; };
 		1F27C8031EC6F01F006435D3 /* NSArray+ShuffledSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F27C8021EC6F01F006435D3 /* NSArray+ShuffledSpec.swift */; };
@@ -93,6 +94,7 @@
 		1F0584391DF5FFB60007E0DA /* UIImage+Transformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Transformations.swift"; sourceTree = "<group>"; };
 		1F05843B1DF5FFED0007E0DA /* UIColor+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Components.swift"; sourceTree = "<group>"; };
 		1F092BF31E1D0F2C00394B30 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		1F100139210B21BF00A56A49 /* NSRegularExpression+MatchesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+MatchesSpec.swift"; sourceTree = "<group>"; };
 		1F27173C1DC8AC2B00DD4318 /* UIColor+ComponentsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ComponentsSpec.swift"; sourceTree = "<group>"; };
 		1F27173E1DC8CB5C00DD4318 /* DiscardTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchView.swift; sourceTree = "<group>"; };
 		1F2717401DC8CC6600DD4318 /* DiscardTouchViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardTouchViewSpec.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				1F325AA11F3224E500B959A4 /* Dictionary+DiffSpec.swift */,
 				1F6142921F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift */,
 				1F334E8120C831CD00F2EB95 /* UIImage+ColorSpec.swift */,
+				1F100139210B21BF00A56A49 /* NSRegularExpression+MatchesSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				1F8C5DA51DF5A3A000403AA9 /* URL+QueryItemsSpec.swift in Sources */,
 				75D4564D1E0D69BA00916BD8 /* String+RandomSpec.swift in Sources */,
 				1F6142931F5001FB00F17C51 /* Collection+JoinNSAttributedStringsSpec.swift in Sources */,
+				1F10013A210B21BF00A56A49 /* NSRegularExpression+MatchesSpec.swift in Sources */,
 				1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */,
 				1F334E8220C831CD00F2EB95 /* UIImage+ColorSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* ApplicationSpec.swift in Sources */,
