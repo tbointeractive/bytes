@@ -26,7 +26,7 @@ public struct SemanticVersion {
     ///   - minor: The minor version. Default = 0
     ///   - patch: The patch version. Default = 0
     ///   - prereleaseIdentifiers: All aditional prereleaseIdentifiers. Default = none.
-    init(major: Int8, minor: Int8?, patch: Int8?, prereleaseIdentifiers: [String] = []) {
+    public init(major: Int8, minor: Int8?, patch: Int8?, prereleaseIdentifiers: [String] = []) {
         self.major = major
         self.minor = minor ?? 0
         self.patch = patch ?? 0
@@ -38,7 +38,7 @@ public struct SemanticVersion {
     ///
     /// - Parameters:
     ///   - string: The string to parse.
-    init?(_ string: String) {
+    public init?(_ string: String) {
         let basic: [String] = string.trimmingCharacters(in: .whitespaces).components(separatedBy: "-")
         let components = basic[0].components(separatedBy: ".")
         guard let major = Int8(components[0]) else { return nil }
