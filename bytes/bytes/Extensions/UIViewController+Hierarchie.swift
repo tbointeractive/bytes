@@ -16,9 +16,9 @@ extension UIViewController {
     ///   - viewController: The ViewController to add as a childViewController.
     ///   - constrainView: If set, the added ViewControllers view will be constrained to the edges of the constrainView.
     public func addChildViewController(_ viewController: UIViewController, constrainEdgesTo constrainView: UIView?) {
-        addChildViewController(viewController)
+        addChild(viewController)
         view.addSubview(viewController.view)
-        viewController.didMove(toParentViewController: self)
+        viewController.didMove(toParent: self)
         if let constrainView = constrainView {
             viewController.view.constrainEdges(to: constrainView)
         }

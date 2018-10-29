@@ -38,7 +38,7 @@ extension UIImage {
         return image(with: .right)
     }
 
-    private func image(with orientation: UIImageOrientation) -> UIImage {
+    private func image(with orientation: UIImage.Orientation) -> UIImage {
         if let cgImage = cgImage {
             return UIImage(cgImage: cgImage, scale: scale, orientation: orientation)
         }

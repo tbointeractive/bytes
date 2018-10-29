@@ -42,7 +42,7 @@ open class AsyncViewController: UIViewController {
     
     /// The view displayed during loading state.
     /// - Remark: You can override this property in a subclass.
-    open var loadingView: UIView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    open var loadingView: UIView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
     
     private var errorView: UIView?
     
