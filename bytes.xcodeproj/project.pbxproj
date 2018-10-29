@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0623B578E7092AA8901A81F8 /* Pods_bytesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43EE8025D910C739CBA6C5 /* Pods_bytesTests.framework */; };
+		1F02068B218763E5003E94A6 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02068A218763E5003E94A6 /* UIView+Nib.swift */; };
+		1F02068D21876513003E94A6 /* UIView+NibSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02068C21876513003E94A6 /* UIView+NibSpecs.swift */; };
+		1F020690218768B6003E94A6 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02068F218768B6003E94A6 /* Empty.xib */; };
+		1F02069221876915003E94A6 /* SingleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02069121876915003E94A6 /* SingleView.xib */; };
+		1F02069421876A28003E94A6 /* MultipleViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02069321876A28003E94A6 /* MultipleViews.xib */; };
+		1F02069621876A86003E94A6 /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02069521876A86003E94A6 /* SingleView.swift */; };
 		1F0584241DF313FE0007E0DA /* UIViewController+Hierarchie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0584231DF313FE0007E0DA /* UIViewController+Hierarchie.swift */; };
 		1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0584251DF316B60007E0DA /* UIViewController+HierarchieSpec.swift */; };
 		1F05842E1DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0584291DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift */; };
@@ -81,6 +87,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F02068A218763E5003E94A6 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		1F02068C21876513003E94A6 /* UIView+NibSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibSpecs.swift"; sourceTree = "<group>"; };
+		1F02068F218768B6003E94A6 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		1F02069121876915003E94A6 /* SingleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleView.xib; sourceTree = "<group>"; };
+		1F02069321876A28003E94A6 /* MultipleViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleViews.xib; sourceTree = "<group>"; };
+		1F02069521876A86003E94A6 /* SingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
 		1F0584231DF313FE0007E0DA /* UIViewController+Hierarchie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Hierarchie.swift"; sourceTree = "<group>"; };
 		1F0584251DF316B60007E0DA /* UIViewController+HierarchieSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HierarchieSpec.swift"; sourceTree = "<group>"; };
 		1F0584291DF5FF9E0007E0DA /* ByteCountFormatter+Preconfigured.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ByteCountFormatter+Preconfigured.swift"; sourceTree = "<group>"; };
@@ -183,10 +195,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1F02068E218768A6003E94A6 /* UIView+Nib */ = {
+			isa = PBXGroup;
+			children = (
+				1F02068F218768B6003E94A6 /* Empty.xib */,
+				1F02069121876915003E94A6 /* SingleView.xib */,
+				1F02069321876A28003E94A6 /* MultipleViews.xib */,
+				1F02069521876A86003E94A6 /* SingleView.swift */,
+			);
+			path = "UIView+Nib";
+			sourceTree = "<group>";
+		};
 		1F05843D1DF6006A0007E0DA /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				1FEBA7271F50311500B1D67A /* UIView+RenderingSpecs.swift */,
+				1F02068C21876513003E94A6 /* UIView+NibSpecs.swift */,
 				7510AF6F1DC8D1AF000E3314 /* ApplicationSpec.swift */,
 				1F5A94AE1DF8ABC8002930CA /* AsyncViewControllerSpec.swift */,
 				1F5DDCE41DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift */,
@@ -218,6 +242,7 @@
 		1FEBA7241F50310F00B1D67A /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
+				1F02068E218768A6003E94A6 /* UIView+Nib */,
 				1FEBA7251F50310F00B1D67A /* Fixture.swift */,
 			);
 			path = Fixture;
@@ -315,6 +340,7 @@
 				1F325A9F1F3224C900B959A4 /* Dictionary+Diff.swift */,
 				1F6142901F50019100F17C51 /* Collection+JoinNSAttributedString.swift */,
 				1F334E7F20C8305A00F2EB95 /* UIImage+Color.swift */,
+				1F02068A218763E5003E94A6 /* UIView+Nib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -418,7 +444,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F02069421876A28003E94A6 /* MultipleViews.xib in Resources */,
 				9EA85DC71DC39A6B001EA93D /* TestAssets.xcassets in Resources */,
+				1F020690218768B6003E94A6 /* Empty.xib in Resources */,
+				1F02069221876915003E94A6 /* SingleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +529,7 @@
 				1F334E8020C8305A00F2EB95 /* UIImage+Color.swift in Sources */,
 				75D456471E0D5F2C00916BD8 /* Bool+Random.swift in Sources */,
 				75D456431E0D521400916BD8 /* Int+Random.swift in Sources */,
+				1F02068B218763E5003E94A6 /* UIView+Nib.swift in Sources */,
 				1F8C5DA31DF5A38100403AA9 /* URL+QueryItems.swift in Sources */,
 				1F0584301DF5FF9E0007E0DA /* NumberFormatter+Preconfigured.swift in Sources */,
 				75DBFFF01E098A46000F43C1 /* Dictionary+Merge.swift in Sources */,
@@ -539,6 +569,7 @@
 				1F5A94AF1DF8ABC8002930CA /* AsyncViewControllerSpec.swift in Sources */,
 				1F3B9E9E1DCB819500727379 /* DeviceSpec.swift in Sources */,
 				1F3CA5841E07148C00121FDC /* SemanticVersionSpec.swift in Sources */,
+				1F02069621876A86003E94A6 /* SingleView.swift in Sources */,
 				1F325AA21F3224E500B959A4 /* Dictionary+DiffSpec.swift in Sources */,
 				1F3B9EA31DCB81F100727379 /* DateFormatter+PreconfiguredSpec.swift in Sources */,
 				1F5DDCE51DDC9B7E002412EA /* ByteCountFormatter+PreconfiguredSpec.swift in Sources */,
@@ -549,6 +580,7 @@
 				1F0584261DF316B60007E0DA /* UIViewController+HierarchieSpec.swift in Sources */,
 				1F334E8220C831CD00F2EB95 /* UIImage+ColorSpec.swift in Sources */,
 				1F3B9E9D1DCB818700727379 /* ApplicationSpec.swift in Sources */,
+				1F02068D21876513003E94A6 /* UIView+NibSpecs.swift in Sources */,
 				1F27C8031EC6F01F006435D3 /* NSArray+ShuffledSpec.swift in Sources */,
 				1F3B9E9F1DCB819500727379 /* UIColor+ComponentsSpec.swift in Sources */,
 				1FEBA7261F50310F00B1D67A /* Fixture.swift in Sources */,
