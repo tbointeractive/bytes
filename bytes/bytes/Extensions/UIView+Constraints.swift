@@ -16,7 +16,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @discardableResult public func constrainEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult public func constrainEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .equal, multiplier: multiplier, constant: constant)
     }
     
@@ -26,7 +26,7 @@ extension UIView {
     ///   - attribute: The layout attribute to be used
     ///   - to: CGFloat constant to constrain this attribute to
     /// - Returns: The constraint that has been set
-    @discardableResult public func constrainEqual(attribute: NSLayoutAttribute, to constant: CGFloat) -> NSLayoutConstraint {
+    @discardableResult public func constrainEqual(attribute: NSLayoutConstraint.Attribute, to constant: CGFloat) -> NSLayoutConstraint {
         return constrain(attribute, to: nil, attribute: .notAnAttribute, relation: .equal, multiplier: 1, constant: constant)
     }
     
@@ -37,7 +37,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @discardableResult public func constrainLessThanOrEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult public func constrainLessThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .lessThanOrEqual, multiplier: multiplier, constant: constant)
     }
     
@@ -48,7 +48,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @discardableResult public func constrainGreaterThanOrEqual(attribute: NSLayoutAttribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult public func constrainGreaterThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .greaterThanOrEqual, multiplier: multiplier, constant: constant)
     }
     
@@ -61,7 +61,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @discardableResult public func constrain(_ attribute: NSLayoutAttribute, to: UIView?, attribute toAttribute: NSLayoutAttribute, relation: NSLayoutRelation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult public func constrain(_ attribute: NSLayoutConstraint.Attribute, to: UIView?, attribute toAttribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: relation, toItem: to, attribute: toAttribute, multiplier: multiplier, constant: constant)
         NSLayoutConstraint.activate([constraint])
         return constraint
