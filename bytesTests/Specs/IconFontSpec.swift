@@ -33,7 +33,7 @@ class IconFontSpec: QuickSpec {
                 let font = UIFont(name: "iconfont", size: 1.0)!
                 let iconFont = IconFont(font: font)
                 let string = iconFont.iconString(identifier: "\u{Eabe}", size: 20.0)
-                let usedFont = string?.attributes(at: 0, effectiveRange: nil)[NSAttributedStringKey.font] as! UIFont
+                let usedFont = string?.attributes(at: 0, effectiveRange: nil)[NSAttributedString.Key.font] as! UIFont
                 expect(usedFont.pointSize) == 20.0
             }
         }
