@@ -70,6 +70,10 @@ public struct Device {
             case "iPhone10,4":    return "iPhone 8 (Global)"
             case "iPhone10,5":    return "iPhone 8 Plus (Global)"
             case "iPhone10,6":    return "iPhone X (Global)"
+            case "iPhone11,2":    return "iPhone XS"
+            case "iPhone11,4":    return "iPhone XS Max (China)"
+            case "iPhone11,6":    return "iPhone XS Max"
+            case "iPhone11,8":    return "iPhone XR"
                 
             // iPod
             case "iPod1,1":      return "iPod Touch 1G"
@@ -117,7 +121,17 @@ public struct Device {
             case "iPad7,2":      return "iPad Pro 12.9 2nd generation (Cellular)"
             case "iPad7,3":      return "iPad Pro 10.5 (WiFi)"
             case "iPad7,4":      return "iPad Pro 10.5 (Cellular)"
-                
+            case "iPad7,5":      return "iPad 6th Gen (WiFi)"
+            case "iPad7,6":      return "iPad 6th Gen (WiFi+Cellular)"
+            case "iPad8,1":      return "iPad Pro 3rd Gen (11 inch, WiFi)"
+            case "iPad8,2":      return "iPad Pro 3rd Gen (11 inch, 1TB, WiFi)"
+            case "iPad8,3":      return "iPad Pro 3rd Gen (11 inch, WiFi+Cellular)"
+            case "iPad8,4":      return "iPad Pro 3rd Gen (11 inch, 1TB, WiFi+Cellular)"
+            case "iPad8,5":      return "iPad Pro 3rd Gen (12.9 inch, WiFi)"
+            case "iPad8,6":      return "iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi)"
+            case "iPad8,7":      return "iPad Pro 3rd Gen (12.9 inch, WiFi+Cellular)"
+            case "iPad8,8":      return "iPad Pro 3rd Gen (12.9 inch, 1TB, WiFi+Cellular)"
+            
             case "i386":         return "Simulator"
             case "x86_64":       return "Simulator"
                 
