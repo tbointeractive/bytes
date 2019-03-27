@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1
+* **feature** Migrated to Swift 4.2
+* **improvement** Added more devices to Device
+
 ## 0.9
 * **feature** Release of v1.0
 
