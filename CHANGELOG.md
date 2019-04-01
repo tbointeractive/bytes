@@ -2,7 +2,13 @@
 
 ## 1.1
 * **feature** Migrated to Swift 4.2
+* **feature** Added Double+TimeInterval extension
+* **feature** Added a function to initialize a UIView from a nib
+* **feature** Exposing the UIImage(from: UIColor) extension
+* **feature** Added a new UIImage+Color extension implementing generating an image with just one plain color
 * **improvement** Added more devices to Device
+* **improvement** Setting the AsyncViewController views backgroundcolor to be white per default
+* **changed** Deprecating and renaming the bool.random function here in bytes
 
 ## 0.9
 * **feature** Release of v1.0
