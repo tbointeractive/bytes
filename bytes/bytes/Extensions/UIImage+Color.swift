@@ -14,7 +14,7 @@ public extension UIImage {
     /// Per default this is non nil and has a `countLimit` of 10.
     /// Set this to nil to deactivate caching at all. Set the `countLimit` of this
     /// chache to 0 if you want to define no caching limit.
-    public static var imageFromColorCache: NSCache<UIColor, UIImage>? = {
+    @objc static var imageFromColorCache: NSCache<UIColor, UIImage>? = {
         let cache = NSCache<UIColor, UIImage>()
         cache.countLimit = 10;
         return cache;
@@ -26,7 +26,7 @@ public extension UIImage {
     ///
     /// - Parameter color: The color of the image.
     /// - Returns: A 1x1 pixes image filled with that color.
-    public static func from(_ color: UIColor) -> UIImage {
+    @objc static func from(_ color: UIColor) -> UIImage {
         if let image = imageFromColorCache?.object(forKey: color) {
             return image;
         }

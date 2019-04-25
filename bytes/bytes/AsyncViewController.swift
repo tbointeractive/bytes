@@ -187,7 +187,7 @@ public extension AsyncViewController {
     /// - loading: The loading closure is currently performed.
     /// - finished: The loading closure finished. The final ViewController is being displayed.
     /// - error: The loading closure failed. An error view is being displayed.
-    public enum State {
+    enum State {
         case idle
         case loading
         case finished

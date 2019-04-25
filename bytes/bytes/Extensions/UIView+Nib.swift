@@ -19,7 +19,7 @@ extension UIView {
     /// tries to initialize a UIView in a UIView.xib in the UIKit bundle and thus returns nil.
     ///
     /// - Returns: Returns the first view
-    public class func fromNib() -> Self? {
+    @objc public class func fromNib() -> Self? {
         return fromNib(nil, bundle: nil, type: self)
     }
     

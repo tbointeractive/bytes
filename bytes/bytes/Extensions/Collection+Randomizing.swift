@@ -13,12 +13,12 @@ extension NSArray {
     /// It uses the Fisher-Yates algorithm.
     ///
     /// [source](https://gist.github.com/natecook1000/0ac03efe07f647b46dae)
-    public func shuffled() -> NSArray {
+    @objc public func shuffled() -> NSArray {
         let array = self as Array
         return array.shuffled() as NSArray
     }
     /// Returns a random element of this array
-    public var random: Element? {
+    @objc public var random: Element? {
         get {
             let array = self as Array
             return array.random

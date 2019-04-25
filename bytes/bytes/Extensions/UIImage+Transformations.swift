@@ -13,28 +13,28 @@ extension UIImage {
     /// Returns a UIImage that is horizontally flipped.
     ///
     /// - returns: a new UIImage
-    public func flippedHorizontally() -> UIImage {
+    @objc public func flippedHorizontally() -> UIImage {
         return image(with: .upMirrored)
     }
     
     /// Returns a UIImage that is vertically flipped.
     ///
     /// - returns: a new UIImage
-    public func flippedVertically() -> UIImage {
+    @objc public func flippedVertically() -> UIImage {
         return image(with: .downMirrored)
     }
     
     /// Returns a UIImage that is rotated to the left by 90 degrees.
     ///
     /// - returns: a new UIImage
-    public func rotatedLeft() -> UIImage {
+    @objc public func rotatedLeft() -> UIImage {
         return image(with: .left)
     }
     
     /// Returns a UIImage that is rotated to the right by 90 degrees.
     ///
     /// - returns: a new UIImage
-    public func rotatedRight() -> UIImage {
+    @objc public func rotatedRight() -> UIImage {
         return image(with: .right)
     }
 

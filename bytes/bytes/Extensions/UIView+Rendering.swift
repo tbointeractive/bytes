@@ -15,7 +15,7 @@ extension UIView {
     ///   because the rendering of a complete view may take some time.
     ///
     /// - Returns: UIImage of the view
-    public func asImage() -> UIImage {
+    @objc public func asImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(frame.size, isOpaque, UIScreen.main.scale)
         let context = UIGraphicsGetCurrentContext()!
         layer.render(in: context)
