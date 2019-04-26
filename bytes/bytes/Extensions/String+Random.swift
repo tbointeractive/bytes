@@ -18,7 +18,7 @@ public extension String {
     ///   - characters: Array of characters that can occur in the random string
     ///   - length: Number of characters the random string should have
     /// - Returns: A String with random order characters
-    public static func random(with characters: [Character], length: Int) -> String {
+    static func random(with characters: [Character], length: Int) -> String {
         var randomString = ""
         let range:Range = 0..<characters.count
         for _ in 0..<length {

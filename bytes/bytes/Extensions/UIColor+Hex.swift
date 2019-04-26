@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
     /// Initializes and returns a color object using a hexadecimal String.
     ///
@@ -17,7 +17,7 @@ extension UIColor {
     /// - Parameter hexString: A hexadecimal String repesenting the color value.
     ///
     /// - Returns: An instance of UIColor
-    public convenience init?(hexString: String) {
+    convenience init?(hexString: String) {
         var hexInt: UInt32 = 0
         let scanner = Scanner(string: hexString)
         var stringLength = hexString.count

@@ -14,7 +14,7 @@ public extension Int {
     ///
     /// - Parameter range: A range the radom number should be in
     /// - Returns: A random Int value
-    public static func random(in range: Range<Int>) -> Int {
+    static func random(in range: Range<Int>) -> Int {
         guard !range.isEmpty else { return 0}
         let rangeSize = range.upperBound - range.lowerBound
         let randomNumber = Int(arc4random_uniform(UInt32(rangeSize)))

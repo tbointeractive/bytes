@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     /// Tries to initialize a view from a xib with the name of the class
     /// in the bundle of the class and returns the first view of the correct type if any.
@@ -19,7 +19,7 @@ extension UIView {
     /// tries to initialize a UIView in a UIView.xib in the UIKit bundle and thus returns nil.
     ///
     /// - Returns: Returns the first view
-    public class func fromNib() -> Self? {
+    @objc class func fromNib() -> Self? {
         return fromNib(nil, bundle: nil, type: self)
     }
     
@@ -31,7 +31,7 @@ extension UIView {
     ///   - bundle: The bundle of the nib. Uses the bundle of the current class if not defined or nil.
     ///   - type: The type of the view your are expecting.
     /// - Returns: The initialized view or nil if none found or unable to initialize.
-    public static func fromNib<T: UIView>(_ nibName: String? = nil, bundle: Bundle? = nil, type: T.Type) -> T? {
+    static func fromNib<T: UIView>(_ nibName: String? = nil, bundle: Bundle? = nil, type: T.Type) -> T? {
         let nibName = nibName ?? String(describing: type)
         let bundle = bundle ?? Bundle(for: type)
         if let _ = bundle.path(forResource: nibName, ofType: "nib") {

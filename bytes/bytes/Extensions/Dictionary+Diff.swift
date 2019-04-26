@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Dictionary where Key: Equatable, Value: Equatable {
+public extension Dictionary where Key: Equatable, Value: Equatable {
     
     /// Calculates the difference to get from a dictionary to another dictionary.
     /// The calculated diff:
@@ -19,7 +19,7 @@ extension Dictionary where Key: Equatable, Value: Equatable {
     ///
     /// - Parameter destination: The dictionary this diff should reach.
     /// - Returns: The diff comparing the source to the destination.
-    public func diff(to destination: [Key:Value]) -> [Key:Value?] {
+    func diff(to destination: [Key:Value]) -> [Key:Value?] {
         var diff: [Key:Value?] = [:]
         for (sourceKey, sourceValue) in self {
             if sourceValue != destination[sourceKey] {

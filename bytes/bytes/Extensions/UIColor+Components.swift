@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     /// Allows setting some or all of the red, green, blue and alpha values of a color.
     /// You can omit any of the values or set it to nil, to keep the value of the color.
     ///
@@ -18,7 +18,7 @@ extension UIColor {
     ///   - blue: the new value for the blue portion
     ///   - alpha: the new value for the alpha portion
     /// - Returns: a new color with all of the new values set
-    public func setting(red: CGFloat? = nil, green: CGFloat? = nil, blue: CGFloat? = nil, alpha: CGFloat? = nil) -> UIColor {
+    func setting(red: CGFloat? = nil, green: CGFloat? = nil, blue: CGFloat? = nil, alpha: CGFloat? = nil) -> UIColor {
         var oldRed: CGFloat = 0.0
         var oldGreen: CGFloat = 0.0
         var oldBlue: CGFloat = 0.0

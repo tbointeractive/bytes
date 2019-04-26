@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
     /// Returns a rendered UIImage of the UIView
     /// - discussion: You might consider executing this method in a background thread, 
     ///   because the rendering of a complete view may take some time.
     ///
     /// - Returns: UIImage of the view
-    public func asImage() -> UIImage {
+    @objc func asImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(frame.size, isOpaque, UIScreen.main.scale)
         let context = UIGraphicsGetCurrentContext()!
         layer.render(in: context)
