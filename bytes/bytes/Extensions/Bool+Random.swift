@@ -14,7 +14,7 @@ public extension Bool {
     ///
     /// - Returns: A random bool value
     @available(*, deprecated, message: "Use the random() function instead")
-    public static func randomBool() -> Bool {
+    static func randomBool() -> Bool {
         return arc4random_uniform(2) == 0
     }
 }

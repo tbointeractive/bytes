@@ -8,17 +8,17 @@
 
 import Foundation
 
-extension ByteCountFormatter {
+public extension ByteCountFormatter {
     
     /// A ByteCountFormatter with countStyle decimal.
-    static public let decimal: ByteCountFormatter = {
+    static let decimal: ByteCountFormatter = {
         let formatter = ByteCountFormatter()
         formatter.countStyle = .decimal
         return formatter
     }()
     
     /// A ByteCountFormatter with countStyle binary.
-    static public let binary: ByteCountFormatter = {
+    static let binary: ByteCountFormatter = {
         let formatter = ByteCountFormatter()
         formatter.countStyle = .binary
         return formatter

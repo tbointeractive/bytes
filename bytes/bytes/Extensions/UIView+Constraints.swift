@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     /// Add an equal constraint from this view to another view
     ///
     /// - parameter attribute: The layout attribute to be used
@@ -16,7 +16,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult public func constrainEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .equal, multiplier: multiplier, constant: constant)
     }
     
@@ -26,7 +26,7 @@ extension UIView {
     ///   - attribute: The layout attribute to be used
     ///   - to: CGFloat constant to constrain this attribute to
     /// - Returns: The constraint that has been set
-    @objc @discardableResult public func constrainEqual(attribute: NSLayoutConstraint.Attribute, to constant: CGFloat) -> NSLayoutConstraint {
+    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to constant: CGFloat) -> NSLayoutConstraint {
         return constrain(attribute, to: nil, attribute: .notAnAttribute, relation: .equal, multiplier: 1, constant: constant)
     }
     
@@ -37,7 +37,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult public func constrainLessThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @objc @discardableResult func constrainLessThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .lessThanOrEqual, multiplier: multiplier, constant: constant)
     }
     
@@ -48,7 +48,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult public func constrainGreaterThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @objc @discardableResult func constrainGreaterThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         return constrain(attribute, to: to, attribute: attribute, relation: .greaterThanOrEqual, multiplier: multiplier, constant: constant)
     }
     
@@ -61,7 +61,7 @@ extension UIView {
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult public func constrain(_ attribute: NSLayoutConstraint.Attribute, to: UIView?, attribute toAttribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @objc @discardableResult func constrain(_ attribute: NSLayoutConstraint.Attribute, to: UIView?, attribute toAttribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: relation, toItem: to, attribute: toAttribute, multiplier: multiplier, constant: constant)
         NSLayoutConstraint.activate([constraint])
         return constraint
@@ -71,7 +71,7 @@ extension UIView {
     ///
     /// - Parameter view: The UIView to which edges this view should be contrainted
     /// - Returns: The constraints that have been set
-    @objc @discardableResult public func constrainEdges(to view: UIView) -> [NSLayoutConstraint] {
+    @objc @discardableResult func constrainEdges(to view: UIView) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(constrainEqual(attribute: .top, to: view))
@@ -85,7 +85,7 @@ extension UIView {
     ///
     /// - Parameter view: The UIView to which margings this view should be contrainted
     /// - Returns: The constraints that have been set
-    @objc @discardableResult public func constrainEdges(toMarginOf view: UIView) -> [NSLayoutConstraint] {
+    @objc @discardableResult func constrainEdges(toMarginOf view: UIView) -> [NSLayoutConstraint] {
         translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(constrain(.top, to: view, attribute: .topMargin, relation: .equal))

@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Adds a child ViewController and its view.
     ///
     /// - Parameters:
     ///   - viewController: The ViewController to add as a childViewController.
     ///   - constrainView: If set, the added ViewControllers view will be constrained to the edges of the constrainView.
-    @objc public func addChildViewController(_ viewController: UIViewController, constrainEdgesTo constrainView: UIView?) {
+    @objc func addChildViewController(_ viewController: UIViewController, constrainEdgesTo constrainView: UIView?) {
         addChild(viewController)
         view.addSubview(viewController.view)
         viewController.didMove(toParent: self)

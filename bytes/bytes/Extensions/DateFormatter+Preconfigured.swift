@@ -8,11 +8,11 @@
 
 import UIKit
 
-extension DateFormatter {
+public extension DateFormatter {
     
     /// A date formatter to use for dates in http requests i.e. Tue, 01 Nov 2016 17:01:04 GMT
     /// The default time zone is GMT
-    @objc static public let httpDateFormatter: DateFormatter = {
+    @objc static let httpDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss z"
@@ -22,7 +22,7 @@ extension DateFormatter {
     
     /// A date formatter conforming to the ISO 8601 standard using this format: yyyy-MM-dd'T'HH:mm:ssZZZZZ
     /// The default time zone is GMT
-    @objc static public let iso8601Formatter: DateFormatter = {
+    @objc static let iso8601Formatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         // This is to match the ISO8601DateFormatter default format and timeZone
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
@@ -32,13 +32,13 @@ extension DateFormatter {
     
     /// A date formatter for localized month and day representation i.e. "23.06." or "06/23"
     /// with current locale
-    @objc static public let dayAndMonth: DateFormatter = {
+    @objc static let dayAndMonth: DateFormatter = {
         return DateFormatter.dayAndMonth(forLocale: Locale.current)
     }()
     
     /// A date formatter for localized weekday representation i.e. "Monday" or "Montag"
     /// with current locale
-    @objc static public let weekday: DateFormatter = {
+    @objc static let weekday: DateFormatter = {
         return DateFormatter.weekday(forLocale: Locale.current)
     }()
     
@@ -46,18 +46,18 @@ extension DateFormatter {
     /// with current locale
     ///
     /// - warning: On iOS < 9 the german abbreviated weekday ends with a fullstop. (Mo.)
-    @objc static public let weekdayShort: DateFormatter = {
+    @objc static let weekdayShort: DateFormatter = {
         return DateFormatter.weekdayShort(forLocale: Locale.current)
     }()
     
     /// A date formatter for a localized first letter of a weekday i.e. "M" or "T"
     /// with current locale
-    @objc static public let weekdaySingleLetter: DateFormatter = {
+    @objc static let weekdaySingleLetter: DateFormatter = {
         return DateFormatter.weekdaySingleLetter(forLocale: Locale.current)
     }()
     
     /// A localized date formatter that returns the time in a short style i.a. "6:30 PM" that is preconfigured to the current locale.
-    @objc static public let shortTime: DateFormatter = {
+    @objc static let shortTime: DateFormatter = {
         return DateFormatter.shortTime(forLocale: Locale.current)
     }()
     
@@ -65,7 +65,7 @@ extension DateFormatter {
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
-    @objc static public func dayAndMonth(forLocale locale: Locale) -> DateFormatter {
+    @objc static func dayAndMonth(forLocale locale: Locale) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.setLocalizedDateFormatFromTemplate("MMdd")
@@ -76,7 +76,7 @@ extension DateFormatter {
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
-    @objc static public func weekday(forLocale locale: Locale) -> DateFormatter {
+    @objc static func weekday(forLocale locale: Locale) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEE")
@@ -89,7 +89,7 @@ extension DateFormatter {
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
-    @objc static public func weekdayShort(forLocale locale: Locale) -> DateFormatter {
+    @objc static func weekdayShort(forLocale locale: Locale) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.setLocalizedDateFormatFromTemplate("EEE")
@@ -100,7 +100,7 @@ extension DateFormatter {
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
-    @objc static public func weekdaySingleLetter(forLocale locale: Locale) -> DateFormatter {
+    @objc static func weekdaySingleLetter(forLocale locale: Locale) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEEE")
@@ -111,7 +111,7 @@ extension DateFormatter {
     ///
     /// - Parameter locale: A Locale for the desired localization
     /// - Returns: A new DateFormatter
-    @objc static public func shortTime(forLocale locale: Locale) -> DateFormatter {
+    @objc static func shortTime(forLocale locale: Locale) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .short
         dateFormatter.dateStyle = .none
