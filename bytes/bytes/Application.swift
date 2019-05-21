@@ -13,17 +13,20 @@ public struct Application {
     /// The main Application.
     static public let main = Application(bundle: Bundle.main)
     
-    /// The bundle name of your app i.e. "com.my-company.my-app"
+    /// The bundle name of your app (CFBundleName)
     public let name: String?
     
-    /// The name of your app as displayed on the homescreen i.e. "My App"
+    /// The name of your app as displayed on the homescreen (CFBundleDisplayName)  i.e. "My App"
     public let displayName: String?
     
-    /// The bundle version aka build number as String i.e. "149"
+    /// The bundle version aka build number as String (CFBundleName) i.e. "149"
     public let buildVersion: String?
     
-    /// The app version as String i.e. "1.0.1"
+    /// The app version as String (CFBundleShortVersionString) i.e. "1.0.1"
     public let version: String?
+    
+    /// The bundle identifier of your app (CFBundleIdentifier) i.e. "com.my-company.my-app"
+    public let bundleIdentifier: String?
     
     /// The app version as a `SemanticVersion`.
     public var semanticVersion: SemanticVersion? {
@@ -33,11 +36,12 @@ public struct Application {
         }
     }
     
-    public init(name: String?, displayName: String?, buildVersion: String?, version: String?) {
+    public init(name: String?, displayName: String?, buildVersion: String?, version: String?, bundleIdentifier: String?) {
         self.name = name
         self.displayName = displayName
         self.buildVersion = buildVersion
         self.version = version
+        self.bundleIdentifier = bundleIdentifier
     }
     
     /// Initializes the `Application` with data from the bundles infoDicionary.
@@ -46,6 +50,7 @@ public struct Application {
         let displayName = bundle.infoDictionary?["CFBundleDisplayName"] as? String
         let buildVersion = bundle.infoDictionary?["CFBundleVersion"] as? String
         let version = bundle.infoDictionary?["CFBundleShortVersionString"] as? String
-        self.init(name: name, displayName: displayName, buildVersion: buildVersion, version: version)
+        let bundleIdentifier = bundle.infoDictionary?["CFBundleIdentifier"] as? String
+        self.init(name: name, displayName: displayName, buildVersion: buildVersion, version: version, bundleIdentifier: bundleIdentifier)
     }
 }
