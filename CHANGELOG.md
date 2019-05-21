@@ -5,6 +5,7 @@
 * **feature** Added Double+TimeInterval extension
 * **feature** Added a function to initialize a UIView from a nib
 * **feature** Exposing the UIImage(from: UIColor) extension
+* **feature** Added BundleIdentifier to Application struct
 * **feature** Added a new UIImage+Color extension implementing generating an image with just one plain color
 * **improvement** Added more devices to Device
 * **improvement** Setting the AsyncViewController views backgroundcolor to be white per default
