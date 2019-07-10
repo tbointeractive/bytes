@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "bytes"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "bytes is a set of tools to cover many all-day tasks in iOS development."
 
   s.description  = <<-DESC
@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT"
 
-  s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Thorsten Stark" => "stark@tbointeractive.com", "Bernhard Eiling" => "eiling@tbointeractive.com", "Pascal Stüdlein" => "stuedlein@tbointeractive.com"  }
+  s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Thorsten Stark" => "stark@tbo.de", "Bernhard Eiling" => "eiling@tbointeractive.com", "Pascal Stüdlein" => "stuedlein@tbointeractive.com"  }
 
   s.platform     = :ios, "8.2"
 
-  s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => 'v1.0'}
+  s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => 'v1.1'}
 
   s.source_files = "bytes/bytes/**/*.swift"
 
