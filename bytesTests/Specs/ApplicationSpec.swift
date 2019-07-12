@@ -24,15 +24,15 @@ class UIApplicationExtensionsSpec: QuickSpec {
         }
         describe("semanticVersion") {
             it("should be nil if the version is nil") {
-                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: nil)
+                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: nil, bundleIdentifier:nil)
                 expect(application.semanticVersion).to(beNil())
             }
             it("should be nil if the version has an invalid format") {
-                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: "this is not a valid version")
+                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: "this is not a valid version", bundleIdentifier: nil)
                 expect(application.semanticVersion).to(beNil())
             }
             it("should be not nil if the version has a valid format") {
-                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: "1.2.3")
+                let application = Application(name: nil, displayName: nil, buildVersion: nil, version: "1.2.3", bundleIdentifier: nil)
                 expect(application.semanticVersion).toNot(beNil())
                 expect(application.semanticVersion?.description) == "1.2.3"
             }

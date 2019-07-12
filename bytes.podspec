@@ -22,7 +22,9 @@ Pod::Spec.new do |s|
 
   s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Thorsten Stark" => "stark@tbo.de", "Bernhard Eiling" => "eiling@tbointeractive.com", "Pascal Stüdlein" => "stuedlein@tbointeractive.com"  }
 
-  s.platform     = :ios, "8.2"
+  s.platform     = :ios, "10.0"
+  
+  s.swift_versions = ['4.2', '5.0']
 
   s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => 'v1.1'}
 

@@ -22,7 +22,7 @@ class StringRandomSpec: QuickSpec {
             }
             it ("should return a string which contains only characters within the given array") {
                 let randomString = String.random(with: chars, length: 20)
-                for char in randomString.characters {
+                for char in randomString {
                     expect(chars.contains(char)).to(beTrue())
                 }
             }
