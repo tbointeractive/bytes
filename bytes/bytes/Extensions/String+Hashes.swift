@@ -9,7 +9,7 @@
 import Foundation
 import CCommonCrypto
 
-typealias CCHashSignature = (_ data: UnsafeRawPointer, _ len: CC_LONG, _ md: UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8>!
+typealias CCHashSignature = (_ data: UnsafeRawPointer, _ len: CC_LONG, _ md: UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8>?
 
 public extension String {
 
