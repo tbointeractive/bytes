@@ -78,13 +78,13 @@ public struct Device {
         case "iPhone12,5":    return "iPhone 11 Pro Max"
             
         // iPod
-        case "iPod1,1":      return "1st Gen iPod"
-        case "iPod2,1":      return "2nd Gen iPod"
-        case "iPod3,1":      return "3rd Gen iPod"
-        case "iPod4,1":      return "4th Gen iPod"
-        case "iPod5,1":      return "5th Gen iPod"
-        case "iPod7,1":      return "6th Gen iPod"
-        case "iPod9,1":      return "7th Gen iPod"
+        case "iPod1,1":      return "iPod Touch 1st Gen"
+        case "iPod2,1":      return "iPod Touch 2nd Gen"
+        case "iPod3,1":      return "iPod Touch 3rd Gen"
+        case "iPod4,1":      return "iPod Touch 4th Gen"
+        case "iPod5,1":      return "iPod Touch 5th Gen"
+        case "iPod7,1":      return "iPod Touch 6th Gen"
+        case "iPod9,1":      return "iPod Touch 7th Gen"
             
         // iPad
         case "iPad1,1":      return "iPad 1"
