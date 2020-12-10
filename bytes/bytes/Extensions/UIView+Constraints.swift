@@ -15,19 +15,21 @@ public extension UIView {
     /// - parameter to: Target object
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
+    /// - parameter priority: The UILayoutPriority value (default = .required)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
-        return constrain(attribute, to: to, attribute: attribute, relation: .equal, multiplier: multiplier, constant: constant)
+    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        return constrain(attribute, to: to, attribute: attribute, relation: .equal, multiplier: multiplier, constant: constant, priority: priority)
     }
     
     /// Add an equal constraint from this view to a constant
     ///
     /// - Parameters:
-    ///   - attribute: The layout attribute to be used
-    ///   - to: CGFloat constant to constrain this attribute to
+    /// - parameter attribute: The layout attribute to be used
+    /// - parameter to: CGFloat constant to constrain this attribute to
+    /// - parameter priority: The UILayoutPriority value (default = .required)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to constant: CGFloat) -> NSLayoutConstraint {
-        return constrain(attribute, to: nil, attribute: .notAnAttribute, relation: .equal, multiplier: 1, constant: constant)
+    @objc @discardableResult func constrainEqual(attribute: NSLayoutConstraint.Attribute, to constant: CGFloat, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        return constrain(attribute, to: nil, attribute: .notAnAttribute, relation: .equal, multiplier: 1, constant: constant, priority: priority)
     }
     
     /// A a constraint with lessThanOrEqual relation
@@ -36,9 +38,10 @@ public extension UIView {
     /// - parameter to: Target object
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
+    /// - parameter priority: The UILayoutPriority value (default = .required)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult func constrainLessThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
-        return constrain(attribute, to: to, attribute: attribute, relation: .lessThanOrEqual, multiplier: multiplier, constant: constant)
+    @objc @discardableResult func constrainLessThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        return constrain(attribute, to: to, attribute: attribute, relation: .lessThanOrEqual, multiplier: multiplier, constant: constant, priority: priority)
     }
     
     /// Add a greaterThanOrEqual constraint from this view to another view
@@ -47,9 +50,10 @@ public extension UIView {
     /// - parameter to: Target object
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
+    /// - parameter priority: The UILayoutPriority value (default = .required)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult func constrainGreaterThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
-        return constrain(attribute, to: to, attribute: attribute, relation: .greaterThanOrEqual, multiplier: multiplier, constant: constant)
+    @objc @discardableResult func constrainGreaterThanOrEqual(attribute: NSLayoutConstraint.Attribute, to: UIView, multiplier: CGFloat = 1, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        return constrain(attribute, to: to, attribute: attribute, relation: .greaterThanOrEqual, multiplier: multiplier, constant: constant, priority: priority)
     }
     
     /// Add a constraint from this view to another view
@@ -60,10 +64,12 @@ public extension UIView {
     /// - parameter relation: A NSLayoutRelation (default = .equal)
     /// - parameter multiplier: The multiplier (default = 1)
     /// - parameter constant: The constant value (default = 0)
+    /// - parameter priority: The UILayoutPriority value (default = .required)
     /// - Returns: The constraint that has been set
-    @objc @discardableResult func constrain(_ attribute: NSLayoutConstraint.Attribute, to: UIView?, attribute toAttribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @objc @discardableResult func constrain(_ attribute: NSLayoutConstraint.Attribute, to: UIView?, attribute toAttribute: NSLayoutConstraint.Attribute, relation: NSLayoutConstraint.Relation, multiplier: CGFloat = 1, constant: CGFloat = 0, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: relation, toItem: to, attribute: toAttribute, multiplier: multiplier, constant: constant)
-        NSLayoutConstraint.activate([constraint])
+        constraint.priority = priority
+        constraint.isActive = true
         return constraint
     }
     

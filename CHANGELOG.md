@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2
+* **feature** Updated for Swift 5
+* **improvement** UIView+Constraints.swift now supports UILayoutPriority
+* **improvement** Added more devices to Device
+
 ## 1.1
 * **feature** Migrated to Swift 4.2
 * **feature** Added Double+TimeInterval extension
