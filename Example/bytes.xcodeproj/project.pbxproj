@@ -310,7 +310,8 @@
 				1F81BC191DC9EEEE004F3433 /* IconFont.swift */,
 				1F3CA5811E07147C00121FDC /* SemanticVersion.swift */,
 			);
-			path = bytes;
+			name = bytes;
+			path = ../../Sources/bytes;
 			sourceTree = "<group>";
 		};
 		4D63C919E028B5BE99943195 /* Frameworks */ = {

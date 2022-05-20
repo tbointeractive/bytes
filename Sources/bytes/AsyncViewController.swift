@@ -6,6 +6,7 @@
 //  Copyright © 2016 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 /// The AsyncViewContoller helps you to display a ViewController that has to be loaded
@@ -194,3 +195,4 @@ public extension AsyncViewController {
         case error
     }
 }
+#endif

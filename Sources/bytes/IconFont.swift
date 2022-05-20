@@ -6,6 +6,7 @@
 //  Copyright © 2016 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 /// An IconFont is a class that helps handling icon fonts. 
@@ -56,3 +57,4 @@ public class IconFont: NSObject {
     }
     
 }
+#endif

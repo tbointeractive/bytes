@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CCommonCrypto
+import CommonCrypto
 
 typealias CCHashSignature = (_ data: UnsafeRawPointer, _ len: CC_LONG, _ md: UnsafeMutablePointer<UInt8>) -> UnsafeMutablePointer<UInt8>?
 

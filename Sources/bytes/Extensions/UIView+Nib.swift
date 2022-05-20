@@ -6,6 +6,7 @@
 //  Copyright © 2018 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 public extension UIView {
@@ -46,3 +47,4 @@ public extension UIView {
         return nil
     }
 }
+#endif
