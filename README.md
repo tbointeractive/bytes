@@ -6,6 +6,11 @@
 **bytes** is a set of tools to cover many all-day tasks in iOS development.
 
 ## Get started
+
+### Install via Swift Package Manager (SPM)
+Add this repo to your packages in Xcode
+TODO: more accurate description
+
 ### Install via [CocoaPods](http://cocoapods.org/)
 Add the bytes Pod
 ```ruby
