@@ -34,7 +34,7 @@ public extension URL {
     ///
     /// - Returns: An Array of URLQueryItems.
     func queryItems() -> [URLQueryItem] {
-        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
+        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: false) else {
             return []
         }
         return components.queryItems ?? []

@@ -6,7 +6,7 @@
 //  Copyright © 2016 TBO INTERACTIVE GmbH & Co. KG. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public extension DateFormatter {
     

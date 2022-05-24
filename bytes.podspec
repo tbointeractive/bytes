@@ -9,11 +9,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "bytes"
-  s.version      = "1.2"
-  s.summary      = "bytes is a set of tools to cover many all-day tasks in iOS development."
+  s.version      = "1.3"
+  s.summary      = "bytes is a set of Swift tools to cover many all-day tasks in iOS development."
 
   s.description  = <<-DESC
-                    bytes is a set of tools to cover many all-day tasks in iOS development.
+                    bytes is a set of Swift tools to cover many all-day tasks in iOS development.
                    DESC
 
   s.homepage     = "https://github.com/tbointeractive/bytes"
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   
   s.swift_versions = ['4.2', '5.0']
 
-  s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => '1.2'}
+  s.source       = { :git => "https://github.com/tbointeractive/bytes.git", :tag => '1.3'}
 
-  s.source_files = "bytes/bytes/**/*.swift"
+  s.source_files = "Sources/**/*.swift"
 
   s.preserve_paths = 'CocoaPods/**/*'
   s.pod_target_xcconfig = {

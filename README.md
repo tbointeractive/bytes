@@ -1,11 +1,20 @@
 # bytes
 
 [![Build Status](https://travis-ci.org/tbointeractive/bytes.svg?branch=develop)](https://travis-ci.org/tbointeractive/bytes)
-<!-- [![coverage report](http://git.tbointeractive.com/chorstmann/bytes/badges/develop/coverage.svg)](http://git.tbointeractive.com/chorstmann/bytes/commits/develop) -->
+![GitHub](https://img.shields.io/github/license/tbointeractive/bytes)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/tbointeractive/bytes)
+![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)
 
-**bytes** is a set of tools to cover many all-day tasks in iOS development.
+**bytes** is a set of Swift tools to cover many all-day tasks in iOS development.
 
 ## Get started
+
+### Install via Swift Package Manager (SPM)
+As of version 1.3 bytes also supports SPM. To use it, add this repo to your packages in Xcode:
+```
+https://github.com/tbointeractive/bytes
+```
+
 ### Install via [CocoaPods](http://cocoapods.org/)
 Add the bytes Pod
 ```ruby
@@ -28,6 +37,11 @@ Please ensure proper testing of all your code whilst not blindly watching the co
 
 ### Documentation
 Please add proper documentation to your code (Xcode Editor -> Structure -> Add Documentation). We use [jazzy](https://github.com/realm/jazzy) to generate the docset. Use the `jazzy` command to generate it on your own machine.
+
+### Release
+The version of this library is set in different ways for Cocoapods and SPM:
+* SPM: uses the commit tag, which must be a valid [semantic version](https://semver.org) (i.e. 1.2.3) [see documentation](https://developer.apple.com/documentation/xcode/publishing-a-swift-package-with-xcode)
+* Cocoapods: uses the commit tag to find the correct sources, but the version itself is defined in the podspec file
 
 ## License
 This project is licensed under the terms of the MIT license. See the LICENSE file.
