@@ -22,8 +22,8 @@ let package = Package(
             name: "bytes",
             dependencies: [],
             path: "Sources"),
-        // .testTarget(
-        //     name: "bytesTests",
-        //     dependencies: ["bytes"]),
+        .testTarget(
+            name: "bytesTests",
+            dependencies: ["bytes"]),
     ]
 )
