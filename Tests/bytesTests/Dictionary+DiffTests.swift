@@ -8,7 +8,7 @@
 import bytes
 import XCTest
 
-class ContentPageTests: XCTestCase {
+class DictionaryDiffTests: XCTestCase {
     
     func testDiffShouldContainUnchangedValues() {
         let source = ["a":"b"]
