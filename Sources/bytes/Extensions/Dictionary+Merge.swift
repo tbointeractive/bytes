@@ -10,6 +10,7 @@ import Foundation
 
 public extension Dictionary {
     
+    @available(*, deprecated, message: "Use Dictionary.merge(_:uniquingKeysWith:) instead from the Swift Standard Library")
     /// Adds all keys and values from dictionary.
     /// - note: All values in self with keys being in both dictionaries will be replaced with the values in dictionary.
     /// - note: The dictionary retains (not copies) the values from the passed dictionary.
@@ -21,6 +22,7 @@ public extension Dictionary {
         }
     }
     
+    @available(*, deprecated, message: "Use Dictionary.merging(_:uniquingKeysWith:) instead from the Swift Standard Library")
     /// Returns a new dictionary with the keys and values form both dictionaries.
     /// - note: All values in self with keys being in both dictionaries will be replaced with the values in dictionary.
     /// - note: The new dictionary retains (not copies) the values from both original dictionaries.

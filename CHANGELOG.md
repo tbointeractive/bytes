@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+* **feature** Added extension on String for NSLocalizedString
+
+## 1.3
+* **feature** Added support for Swift Package Manager
+* **changed** Deprecated merge functions on Dictionary (The ones from Swift Standard Library should be used instead)
+
 ## 1.2
 * **feature** Updated for Swift 5
 * **improvement** UIView+Constraints.swift now supports UILayoutPriority
@@ -16,7 +23,7 @@
 * **improvement** Setting the AsyncViewController views backgroundcolor to be white per default
 * **changed** Deprecating and renaming the bool.random function here in bytes
 
-## 0.9
+## 1.0
 * **feature** Release of v1.0
 
 ## 0.9
