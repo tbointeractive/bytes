@@ -2,5 +2,5 @@ version: 1
 builder:
   configs:
     - platform: ios
-    documentation_targets: [bytes]
+      documentation_targets: [bytes]
     
