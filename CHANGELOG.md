@@ -1,9 +1,10 @@
 # Changelog
 
-## Unreleased
-* **feature** Added extension on String for NSLocalizedString
+## 1.4.0
+* **feature** Added extension on UserDefaults for Set
 
-## 1.3
+## 1.3.0
+* **feature** Added extension on String for NSLocalizedString
 * **feature** Added support for Swift Package Manager
 * **changed** Deprecated merge functions on Dictionary (The ones from Swift Standard Library should be used instead)
 
